@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NFT Marketplace Uygulaması
 
-## Getting Started
+Bu, NFT (Non-Fungible Token) ticareti yapmak için bir pazar yeri uygulamasıdır. Bu uygulama, kullanıcıların dijital varlıkları NFT olarak oluşturmasına, listelemesine ve satmasına olanak tanır.
 
-First, run the development server:
+## Özellikler
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Kullanıcılar hesap oluşturabilir ve oturum açabilir.
+- Kullanıcılar NFT'lerini yükleyebilir, açık artırmaya koyabilir veya sabit bir fiyattan satabilir.
+- Kullanıcılar NFT'leri keşfedebilir, satın alabilir ve koleksiyonlarını görüntüleyebilir.
+- Ödeme işlemleri için Ethereum blockchain kullanılır.
+- Kullanıcıların satın aldığı NFT'ler kişisel cüzdanlarına aktarılır.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Kullanılan Teknolojiler
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- React.js: Kullanıcı arayüzünü oluşturmak için kullanılan JavaScript kütüphanesi.
+- Ethereum Smart Contracts: NFT'lerin oluşturulması, listelenmesi ve satılması için kullanılan akıllı sözleşmeler.
+- Web3.js: Ethereum blockchain ile etkileşim kurmak için kullanılan JavaScript kütüphanesi.
+- IPFS (InterPlanetary File System): NFT'lerin depolanması ve dağıtılması için kullanılan merkezi olmayan bir protokol.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Kurulum
 
-## Learn More
+1. Bu depoyu klonlayın:
 
-To learn more about Next.js, take a look at the following resources:
+git clone https://github.com/sizin-kullanici-adi/nft-marketplace.git
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+2. Proje dizinine gidin:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+cd nft-marketplace
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+3. Gerekli bağımlılıkları yükleyin:
+
+npm install
+
+
+4. Projeyi başlatın:
+
+npm start
+
+
+Uygulama [http://localhost:3000](http://localhost:3000) adresinde çalışacaktır.
+
+## Katkıda Bulunma
+
+Yardımcı olmak veya hata bildirmek için lütfen bir "issue" açın veya bir "pull request" gönderin. Her türlü katkıya açığız!
+
+## Lisans
+
+Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasını inceleyin.
