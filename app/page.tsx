@@ -1,6 +1,8 @@
 
 export default function Home() {
   return (
-  <div>hello world</div>
+  <div className="bg-[#F9F6FE] h-[100%] w-[57%]">
+    hello world
+    </div>
   )
 }
