@@ -1,23 +1,51 @@
-"use client"
-import Image from 'next/image'
-import React from 'react'
-
+"use client";
+import Image from "next/image";
+import React from "react";
+import Topbar from "./Topbar";
+import Bottombar from "./Bottombar";
+// import Baritemstop from "@/components/Baritemstop"
+const arr = [
+  { title: "Home" },
+  { title: "Market" },
+  { title: "Trends" },
+  { title: "Collections" },
+];
+const arr2 = [
+  { title: "My Portfolio" },
+  { title: "Wallet" },
+  { title: "Favourites" },
+  { title: "History" },
+  { title: "Settings" },
+];
 const LeftBar = () => {
+  const textStyle = {
+    background: "linear-gradient(105.26deg, #3E06D6 0%, #901BB7 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    textFillColor: "transparent",
+  };
+
   return (
     <div className=" h-screen w-[18%] flex flex-col items-start ">
-      <div className=' bg-red-300 mt-8 gap-5  h-[5vh] text-[#3E06D6] font-bold lg:text-lg w-full flex items-center justify-center'>
-       <Image
-       src={"/vector.png"}
-       alt='asd'
-       width={35}
-       height={35}
-       />
-  
-        Curr Marketplace 
-        </div>
-        <div className='flex flex-col bg-red-700 w-[98px] h-[336px]'>selam</div>
+      <div
+        style={textStyle}
+        
+        className=" mt-8 gap-5  font-extrabold lg:text-lg w-full flex items-center justify-center"
+      >
+        <Image src={"/vector.png"} alt="asd" width={35} height={35} />
+        Curr Marketplace
+      </div>
+
+      <div className="flex flex-col items-center p-0 mt-16 gap-12 w-full h-auto">
+        <Topbar />
+
+        <div className="font-bold text-xl w-10/12">Profile</div>
+
+        <Bottombar />
+      </div>
     </div>
-  )
-}
-  
-export default LeftBar  
+  );
+};
+
+export default LeftBar;

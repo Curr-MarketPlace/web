@@ -2,7 +2,7 @@ import React from 'react'
 
 const index = () => {
   return (
-    <div className='bg-amber-500 w-[25%] h-[100%]'>right bar</div>
+    <div className='bg-[#F9F6FE] h-[100%] w-[25%]'>right bar</div>
   )
 }
 

@@ -3,12 +3,26 @@
 @tailwind utilities;
 
 
-
-
 html,
 body,
 :root{
   margin: 0;
   padding: 0;
   height: 100%;
+}
+
+.text-style {
+  background: #616161;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.text-style:hover {
+  background: linear-gradient(105.26deg, #3E06D6 0%, #901BB7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
