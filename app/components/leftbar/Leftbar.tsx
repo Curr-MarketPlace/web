@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import Topbar from "./Topbar";
-import Bottombar from "./Bottombar";
+import Topbar from "./Profileitems";
+import Bottombar from "./Mainitems";
+import Button from "../buttons/Button";
 // import Baritemstop from "@/components/Baritemstop"
 const arr = [
   { title: "Home" },
@@ -37,12 +38,19 @@ const LeftBar = () => {
         Curr Marketplace
       </div>
 
-      <div className="flex flex-col items-center p-0 mt-16 gap-12 w-full h-auto">
+      <div className="flex flex-col items-center p-0 mt-14 gap-5 w-full h-auto">
         <Topbar />
 
         <div className="font-bold text-xl w-10/12">Profile</div>
 
         <Bottombar />
+       
+      </div>
+      <div className=" flex items-end justify-center w-full h-full">
+      <Button 
+      rounded="rounded-3xl"
+      btnLabel="Log Logout"
+      />
       </div>
     </div>
   );

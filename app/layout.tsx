@@ -1,5 +1,5 @@
-import LeftBar from './components/Leftbar'
-import Rightbar from './components/Rightbar'
+import LeftBar from './components/leftbar/Leftbar'
+import Rightbar from './components/rightbar/Rightbar'
 
 import './globals.css'
 import { Inter } from 'next/font/google'
