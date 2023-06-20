@@ -16,7 +16,7 @@ const Button :React.FC<ButtonProps> = ({
   // icon:Icon
 }) => {
   return (
-    <button className={` bg-blue-600  ${rounded} w-[112px] h-[40px] my-6 bg-gradient-to-r from-[#3E06D6] from-60% to-[#901BB7] to-100%`}>{btnLabel}</button>
+    <button className={` bg-blue-600 hover:opacity-90 text-white text-xs ${rounded} w-[112px] h-[40px] my-6 bg-gradient-to-r from-[#3E06D6] from-60% to-[#901BB7] to-100%`}>{btnLabel}</button>
   )
 }
 

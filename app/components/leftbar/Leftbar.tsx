@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import Topbar from "./Profileitems";
-import Bottombar from "./Mainitems";
+import Profileitems from "./Profileitems";
+import Mainitems from "./Mainitems";
 import Button from "../buttons/Button";
 // import Baritemstop from "@/components/Baritemstop"
 const arr = [
@@ -39,11 +39,11 @@ const LeftBar = () => {
       </div>
 
       <div className="flex flex-col items-center p-0 mt-14 gap-5 w-full h-auto">
-        <Topbar />
+        <Profileitems />
 
         <div className="font-bold text-xl w-10/12">Profile</div>
 
-        <Bottombar />
+        <Mainitems />
        
       </div>
       <div className=" flex items-end justify-center w-full h-full">
