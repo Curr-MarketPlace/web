@@ -7,13 +7,13 @@ const index = () => {
   const style = { color: "#3E0AD4", fontSize: "1.5em" };
 
   return (
-    <div className="bg-[#F9F6FE] gap-1 h-[100%] w-[25%] flex flex-col items-center  ">
-      <div className="w-full h-[88px] bg-[#F9F6FE] flex justify-end items-center gap-8 pr-6">
+    <div className="bg-[#F9F6FE] overflow-y-auto gap-1 h-[100%] w-[25%] flex flex-col items-center  ">
+      <div className="w-full min-h-[88px] bg-[#F9F6FE] flex justify-end items-center gap-8 pr-6">
         <div
-          className="relative inline-flex items-center justify-center w-8 h-8 overflow-hidden
+          className="relative inline-flex items-center justify-center w-9 h-9 overflow-hidden
         rounded-full  border-2 border-purple-500 hover:border-4 hover:border-purple-500"
         >
-          <FaBell className="text-xl hover:text-lg" color="#3E0AD4" />
+          <FaBell className="text-2xl hover:text-xl" color="#3E0AD4" />
         </div>
         <div
           className="relative inline-flex items-center justify-center w-12 h-12 overflow-hidden
@@ -22,8 +22,10 @@ const index = () => {
           <Image src={"/unnamed.jpg"} alt="asd" className="rounded-full object-cover" width={42} height={42} />
         </div>
       </div>
+      
       <Topcreator/>
       <Featuredcreators/>
+     
 
     </div>
   );

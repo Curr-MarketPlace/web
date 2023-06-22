@@ -4,6 +4,7 @@ import React from "react";
 import Profileitems from "./Profileitems";
 import Mainitems from "./Mainitems";
 import Button from "../buttons/Button";
+import { FaReact } from "react-icons/fa";
 // import Baritemstop from "@/components/Baritemstop"
 const arr = [
   { title: "Home" },
@@ -31,7 +32,6 @@ const LeftBar = () => {
     <div className=" h-screen w-[18%] flex flex-col items-start ">
       <div
         style={textStyle}
-        
         className=" mt-8 gap-5  font-extrabold lg:text-lg w-full flex items-center justify-center"
       >
         <Image src={"/vector.png"} alt="asd" width={35} height={35} />
@@ -44,13 +44,16 @@ const LeftBar = () => {
         <div className="font-bold text-xl w-10/12">Profile</div>
 
         <Mainitems />
-       
       </div>
       <div className=" flex items-end justify-center w-full h-full">
-      <Button 
-      rounded="rounded-3xl"
-      btnLabel="Log Logout"
-      />
+        <Button
+          rounded="rounded-3xl"
+          btnLabel="Logout"
+          py="2"
+          px="6"
+          size="sm"
+          icon={FaReact}
+        />
       </div>
     </div>
   );
