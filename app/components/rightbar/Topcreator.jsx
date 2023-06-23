@@ -38,11 +38,11 @@ const Topcreatorarr=[
 const Topcreator = () => {
   return (
     <>
-    <div className='flex justify-between items-center w-[348px] h-6'>
+    <div className='flex justify-between items-center  w-[90%] h-6'>
       <span className='font-bold text-base'>Top Creator</span>
       <span className='text-xs text-[#616161]'>See All</span>
     </div>
-    <div className="min-h-[40%] w-[90%] gap-3 flex flex-col overflow-y-auto rounded-2xl p-4 bg-white">
+    <div className="min-h-[40%] w-[90%] gap-3 my-3 flex flex-col overflow-y-auto rounded-2xl p-4 bg-white">
       {
         Topcreatorarr.map((item)=>(
           <div className='flex  w-full items-center gap-2 h-[40px] '>
@@ -59,9 +59,9 @@ const Topcreator = () => {
           <Button
           btnLabel='Follow'
           rounded="rounded-3xl"
-          py="2"
-          px="6"
-          size="[8px]"
+          py="1"
+          px="4"
+          size="[10px]"
           />
       </div>
           
