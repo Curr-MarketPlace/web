@@ -42,7 +42,7 @@ const Featuredcreators = () => {
           <div className='w-full h-[13%] text-xs text-[#616161] '>
             Ottoman NFT
           </div>
-          <span className='font-semibold text-sm flex items-center'>
+          <span className='font-medium text-sm flex items-center'>
                 <FaEthereum/>
              9.1 ETH
           </span>
@@ -62,7 +62,7 @@ const Featuredcreators = () => {
           <div className='w-full h-[13%] text-xs text-[#616161] '>
             Ottoman NFT
           </div>
-          <span className='font-semibold text-sm flex items-center'>
+          <span className='font-medium text-sm flex items-center'>
                 <FaEthereum/>
              9.1 ETH
           </span>
