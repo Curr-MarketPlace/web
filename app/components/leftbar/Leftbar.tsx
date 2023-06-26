@@ -22,7 +22,7 @@ const LeftBar = () => {
       <div
       onClick={()=>router.push("/")}
         style={textStyle}
-        className=" mt-8 gap-5  font-extrabold lg:text-lg w-full flex items-center justify-center"
+        className=" mt-8 gap-5  font-extrabold lg:text-lg w-full flex items-center justify-center cursor-pointer"
       >
         <Image src={"/vector.png"} alt="asd" width={35} height={35} />
         Curr Marketplace

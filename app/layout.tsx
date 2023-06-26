@@ -1,5 +1,6 @@
 import LeftBar from './components/leftbar/Leftbar'
 import Rightbar from './components/rightbar/Rightbar'
+import Searchbar from "./components/searchbar/Searchbar"
 
 import './globals.css'
 import { Inter } from 'next/font/google'
@@ -21,7 +22,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className='flex flex-row h-[100%] w-[100%]'>
         <LeftBar/>
-        <div className='bg-[#F9F6FE] flex flex-col h-[100%] w-[57%]'>
+        <div className='bg-[#F9F6FE] pl-6 flex flex-col h-[100%] w-[57%]'>
+               <Searchbar/>
+
         {children}
         </div>
         <Rightbar/>

@@ -9,7 +9,7 @@ const index = () => {
 
   return (
     <div className="bg-[#F9F6FE] overflow-y-auto gap-1 h-[100%] w-[25%] flex flex-col items-center  ">
-      <div className="w-full min-h-[88px] bg-[#F9F6FE] flex justify-end items-center gap-8 pr-6">
+      <div className="w-full min-h-[12%] flex justify-end items-center gap-8 pr-6">
         <div
           className="relative inline-flex items-center justify-center w-9 h-9 overflow-hidden
         rounded-full  border-2 border-purple-500 hover:border-4 hover:border-purple-500"
