@@ -5,20 +5,9 @@ import Profileitems from "./Profileitems";
 import Mainitems from "./Mainitems";
 import Button from "../buttons/Button";
 import { FaReact } from "react-icons/fa";
+import {useRouter} from "next/navigation"
 // import Baritemstop from "@/components/Baritemstop"
-const arr = [
-  { title: "Home" },
-  { title: "Market" },
-  { title: "Trends" },
-  { title: "Collections" },
-];
-const arr2 = [
-  { title: "My Portfolio" },
-  { title: "Wallet" },
-  { title: "Favourites" },
-  { title: "History" },
-  { title: "Settings" },
-];
+
 const LeftBar = () => {
   const textStyle = {
     background: "linear-gradient(105.26deg, #3E06D6 0%, #901BB7 100%)",
@@ -27,10 +16,11 @@ const LeftBar = () => {
     backgroundClip: "text",
     textFillColor: "transparent",
   };
-
+ const router = useRouter()
   return (
     <div className=" h-screen w-[18%] flex flex-col items-start ">
       <div
+      onClick={()=>router.push("/")}
         style={textStyle}
         className=" mt-8 gap-5  font-extrabold lg:text-lg w-full flex items-center justify-center"
       >
