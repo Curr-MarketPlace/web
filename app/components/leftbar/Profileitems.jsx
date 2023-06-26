@@ -1,10 +1,11 @@
 import Image from "next/image";
 import React from "react";
 const arr = [
-  { title: "Home" },
-  { title: "Market" },
-  { title: "Trends" },
-  { title: "Collections" },
+  { title: "My Portfolio" },
+  { title: "Wallet" },
+  { title: "Favourites" },
+  { title: "History" },
+  { title: "Settings" },
 ];
 const Topbar = () => {
   const textStyle = {

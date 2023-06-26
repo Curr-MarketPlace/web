@@ -21,7 +21,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className='flex flex-row h-[100%] w-[100%]'>
         <LeftBar/>
+        <div className='bg-[#F9F6FE] flex flex-col h-[100%] w-[57%]'>
         {children}
+        </div>
         <Rightbar/>
         </div>
         </body>

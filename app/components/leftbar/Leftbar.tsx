@@ -39,11 +39,11 @@ const LeftBar = () => {
       </div>
 
       <div className="flex flex-col items-center p-0 mt-14 gap-5 w-full h-auto">
-        <Profileitems />
+        <Mainitems />
 
         <div className="font-bold text-xl w-10/12">Profile</div>
+        <Profileitems />
 
-        <Mainitems />
       </div>
       <div className=" flex items-end justify-center w-full h-full">
         <Button
