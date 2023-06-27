@@ -3,7 +3,7 @@ import React from 'react'
 
 const MainCard = () => {
   return (
-    <div className='w-full  h-[300px] '>
+    <div className='w-full h-auto '>
         <Image
         src={"/ad-card.png"}
         alt='card'
