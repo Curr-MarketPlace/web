@@ -6,23 +6,17 @@ const Hotbits = () => {
     const arr=[
         {
             image:"/Apeloves.png",
-            
         }, {
             image:"/Apeloves2.png",
-            
         }, {
             image:"/Apeloves3.png",
-            
         },
         {
             image:"/Apeloves.png",
-            
         }, {
             image:"/Apeloves2.png",
-            
         }, {
             image:"/Apeloves3.png",
-            
         },
     ]
   return (

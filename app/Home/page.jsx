@@ -1,7 +1,7 @@
 import React from 'react'
 import MainCard from "./MainCard"
 import Hotbits from "./Hotbits"
-import './button.css'
+import TrendingAuctions from "./TrendingAuctions"
 
 const page = () => {
   return (  
@@ -21,6 +21,13 @@ const page = () => {
 
       <Hotbits/>
 
+
+      <div className='flex items-center justify-between w-full h-[64px]'>
+           <span className='font-semibold text-base text-black'>Trending Auctions</span>
+      </div>
+
+      <TrendingAuctions/>
+       
       </div>
   )
 }
