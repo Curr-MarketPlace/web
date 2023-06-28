@@ -10,8 +10,9 @@ const arr2 = [
   { title: "Collections" },
 ];
 const Bottombar = () => {
-  const style = { color: "purple", fontSize: "1.5em" };
+  const style = { color: "#3E06D6", fontSize: "1.2em" };
   const router = useRouter();
+   
   return (
     <div className="flex flex-col gap-4 items-start p-0 w-full h-auto ">
       {arr2.map((items, index) => (
@@ -20,7 +21,8 @@ const Bottombar = () => {
           onClick={() => router.push(`/${items.title}`)}
           className="flex flex-row w-full justify-start gap-4 pl-8 cursor-pointer"
         >
-          <FaReact width={20} height={20} />
+          {/* <FaReact width={20} height={20} style={style}  /> */}
+          <Image src={"/vector.png"} alt="asd" width={20} height={20} />
 
           <div className="text-style !text-sm font-semibold ">
             {items.title}

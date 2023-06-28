@@ -1,3 +1,4 @@
+import { log } from "console";
 import React from "react";
 import { IconType } from "react-icons";
 import { FaReact } from "react-icons/fa";
@@ -5,8 +6,8 @@ type ButtonProps = {
   // onSubmit: (e:React.MouseEvent<HTMLButtonElement>)=> void
   btnLabel: string;
   rounded: string;
-  px: string;
-  py: string;
+  px: number;
+  py: number;
   size: string;
   icon?: IconType;
   // outLine?: boolean;
@@ -32,8 +33,11 @@ const Button: React.FC<ButtonProps> = ({
       {Icon && <Icon size={15} />}
 
       {btnLabel}
+      
     </button>
+  
   );
+  
 };
 
 export default Button;

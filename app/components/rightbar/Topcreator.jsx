@@ -59,8 +59,8 @@ const Topcreator = () => {
           <Button
           btnLabel='Follow'
           rounded="rounded-3xl"
-          py="1"
-          px="4"
+          py={1}
+          px={4}
           size="[10px]"
           />
       </div>

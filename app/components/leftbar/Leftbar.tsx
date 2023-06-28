@@ -39,9 +39,9 @@ const LeftBar = () => {
         <Button
           rounded="rounded-3xl"
           btnLabel="Logout"
-          py="2"
-          px="6"
-          size="sm"
+          py={2}
+          px={6}
+          size="lg"
           icon={FaReact}
         />
       </div>
