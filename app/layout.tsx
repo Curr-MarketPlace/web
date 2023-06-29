@@ -20,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className='flex flex-row h-[100%] w-[100%]'>
+        <div className='flex fixed flex-row h-[100%] w-[100%]'>
         <LeftBar/>
-        <div className='bg-[#F9F6FE] pl-6 flex flex-col h-[100%] w-[57%]'>
+        <div className='bg-[#F9F6FE] pl-6 flex flex-col h-full w-[57%]'>
                <Searchbar/>
 
         {children}

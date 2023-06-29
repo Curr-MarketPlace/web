@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import {FaEthereum} from "react-icons/fa"
+import {HiOutlineHeart} from "react-icons/hi";
 
 const Hotbits = () => {
     const arr=[
@@ -22,15 +23,17 @@ const Hotbits = () => {
   return (
     <div className='flex flex-row gap-6  w-full overflow-hidden h-[50%] overflow-x-auto'>
      {arr.map((item,i)=>(
-        <div key={i} className='flex flex-col gap-2 min-w-[25%] h-full p-3'>
-        <div className='w-auto h-auto mb-1'>
-         <Image
-         src={item.image}
-         alt='asd'
-         height={500}
-         width={500}
-         />
-         </div>
+        <div key={i} className='flex flex-col gap-2 min-w-[25%] h-full bg-white rounded-2xl p-3'>
+        <div className="flex justify-end mb-1 h-auto w-auto relative">
+            <button className="flex items-center justify-center absolute rounded-full h-7 w-7 m-2 bg-white">
+              <HiOutlineHeart
+              color="#616161"
+              size={20}
+              /> 
+            </button>
+            <Image src={item.image} alt="market" width={300} height={300} />
+          </div>
+         
          <div className='text-item1 flex justify-between items-center'>
            <span className='text-xs font-semibold'>Ape Loves</span>
            <span className='text-[#616161] text-xs font-medium'>12.2k fav</span>
