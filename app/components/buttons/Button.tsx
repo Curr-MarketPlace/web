@@ -1,7 +1,5 @@
-import { log } from "console";
 import React from "react";
 import { IconType } from "react-icons";
-import { FaReact } from "react-icons/fa";
 type ButtonProps = {
   // onSubmit: (e:React.MouseEvent<HTMLButtonElement>)=> void
   btnLabel: string;
