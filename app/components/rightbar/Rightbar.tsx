@@ -31,7 +31,7 @@ const index = () => {
        
       </div>
 
-      <SettingsModal onClose={handleOnClose} visible={showMyModal}/>
+      <SettingsModal onClose={handleOnClose}  visible={showMyModal}/>
       <Topcreator/>
       <Featuredcreators/>
       <History/>
