@@ -6,6 +6,8 @@ import Topcreator from "./Topcreator";
 import Featuredcreators from "./Featuredcreators";
 import History from "./History";
 import SettingsModal from "./comp/SettingsModal"
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+
 const index = () => {
   const [showMyModal, setshowMyModal] = useState(false)
 
@@ -14,6 +16,8 @@ const index = () => {
   return (
     <div className="bg-[#F9F6FE] overflow-y-auto gap-1 h-[100%] w-[25%] flex flex-col items-center relative ">
       <div className="w-full min-h-[12%] flex justify-end items-center gap-8 pr-6">
+  <ConnectButton  /> 
+
         <div
           className="relative inline-flex items-center justify-center w-9 h-9 overflow-hidden
         rounded-full  border-2 border-purple-500 hover:border-4 hover:border-purple-500"
@@ -28,7 +32,6 @@ const index = () => {
           <Image src={"/unnamed.jpg"} alt="asd" className="rounded-full object-cover" width={38} height={38} />
          
         </div>
-       
       </div>
 
       <SettingsModal onClose={handleOnClose}  visible={showMyModal}/>

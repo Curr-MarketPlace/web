@@ -1,12 +1,15 @@
 import React from 'react'
 import { IconType } from "react-icons";
 import {TbLogout} from "react-icons/tb"
+
 type ButtonProps = {
    visible: Boolean
    onClose:()=>void
   };
   
-
+const handleClick=()=>{
+  console.log("calisti");
+}
 const SettingsModal:React.FC<ButtonProps> = ({visible,onClose}) => {
 
   if(!visible){
@@ -17,8 +20,11 @@ const SettingsModal:React.FC<ButtonProps> = ({visible,onClose}) => {
     <button onClick={onClose} className='flex justify-end pr-2'>X</button>
     
     <ul className="flex flex-col gap-6 cursor-pointer">
-    <li className="relative">
+    <li onClick={()=>handleClick()} className="relative">
       Connect Wallet
+
+    {/* */}
+
       <div className="h-0.5  bg-white absolute bottom-0 left-0 right-0"></div>
     </li>
     <li className="relative">
