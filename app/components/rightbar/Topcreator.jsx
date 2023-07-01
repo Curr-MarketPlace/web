@@ -44,8 +44,8 @@ const Topcreator = () => {
     </div>
     <div className="min-h-[40%] w-[90%] gap-3 my-3 flex flex-col overflow-y-auto rounded-2xl p-4 bg-white">
       {
-        Topcreatorarr.map((item)=>(
-          <div className='flex  w-full items-center gap-2 h-[40px] '>
+        Topcreatorarr.map((item,index)=>(
+          <div key={index} className='flex  w-full items-center gap-2 h-[40px] '>
           <Image 
           src={item.img}
           alt='adss'

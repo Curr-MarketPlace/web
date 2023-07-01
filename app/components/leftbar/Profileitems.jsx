@@ -18,8 +18,8 @@ const Topbar = () => {
 
   return (
     <div className="flex flex-col  gap-4 items-start p-0 w-full h-auto">
-      {arr.map((i) => (
-        <div className="flex flex-row  w-full justify-start gap-4 pl-8 cursor-pointer">
+      {arr.map((i,index) => (
+        <div key={index} className="flex flex-row  w-full justify-start gap-4 pl-8 cursor-pointer">
           <Image src={"/vector.png"} alt="asd" width={20} height={20} />
           <div className="text-style !text-sm font-semibold ">{i.title}</div>
         </div>
