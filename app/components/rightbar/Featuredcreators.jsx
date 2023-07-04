@@ -11,8 +11,8 @@ const Featuredcreators = () => {
       <span className='text-xs text-[#616161]'>See All</span>
     </div>
 
-    <div className="min-h-[40%] w-[90%] flex flex-col rounded-2xl bg-white">
-    <div className='flex my-3 gap-2 p-4  w-full items-center  h-[40px] '>
+    <div className="min-h-auto p-4 w-[90%] flex flex-col rounded-2xl bg-white">
+    <div className='flex  mb-3  gap-2 px-4 w-full items-center  h-[40px] '>
           <Image
           src={"/Ellipse2.png"}
           alt='adss'
@@ -27,7 +27,7 @@ const Featuredcreators = () => {
           <BiDotsHorizontalRounded size={24} />
       </div>
       <div className='flex flex-row h-full w-auto gap-6 justify-center '>
-      <div className='item-1 w-[42%] h-[95%] flex flex-col '>
+      <div className='item-1 gap-1 w-[42%] h-[95%] flex flex-col '>
       <Image
           src={"/FatihSultanMehmed.png"}
           alt='adss'
@@ -47,7 +47,7 @@ const Featuredcreators = () => {
              9.1 ETH
           </span>
       </div>
-      <div className='item-2 w-[42%] h-[95%] '>
+      <div className='item-1 gap-1 w-[42%] h-[95%] flex flex-col '>
       <Image
           src={"/FatihSultanMehmed.png"}
           alt='adss'
@@ -67,6 +67,7 @@ const Featuredcreators = () => {
              9.1 ETH
           </span>
       </div>
+    
       </div>
     </div>
     </>

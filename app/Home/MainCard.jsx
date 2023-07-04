@@ -3,12 +3,12 @@ import React from 'react'
 
 const MainCard = () => {
   return (
-    <div className='w-full h-auto '>
+    <div className='w-full  h-auto '>
         <Image
         src={"/ad-card.png"}
         alt='card'
-        width={1000}
-        height={1000}
+        width={9999}
+        height={9999}
         />
     </div>
   )

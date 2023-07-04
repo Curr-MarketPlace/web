@@ -14,16 +14,18 @@ const index = () => {
       const handleOnClose = ()=> setshowMyModal(false)
       
   return (
-    <div className="bg-[#F9F6FE] overflow-y-auto gap-1 h-[100%] w-[25%] flex flex-col items-center relative ">
-      <div className="w-full min-h-[12%] flex justify-end items-center gap-8 pr-6">
-  <ConnectButton  /> 
+    <div className="bg-[#F9F6FE] overflow-y-auto h-[100%] w-[25%] flex flex-col items-center relative ">
+      <div className="w-full min-h-[12%] flex justify-end items-center gap-5 pr-6">
+          <ConnectButton 
+          showBalance={false}
+          /> 
 
-        <div
+        {/* <div
           className="relative inline-flex items-center justify-center w-9 h-9 overflow-hidden
         rounded-full  border-2 border-purple-500 hover:border-4 hover:border-purple-500"
         >
           <FaBell className="text-2xl hover:text-xl" color="#3E0AD4" />
-        </div>
+        </div> */}
         <div
         onClick={()=>setshowMyModal(true)}
           className="relative inline-flex items-center justify-center w-11 h-11 overflow-hidden
