@@ -1,6 +1,6 @@
 import React from 'react'
 import MainCard from "./MainCard"
-import Hotbits from "./Hotbits"
+import Hotbids from "./Hotbids"
 import TrendingAuctions from "./TrendingAuctions"
 
 const page = () => {
@@ -19,7 +19,7 @@ const page = () => {
 
       </div>
 
-      <Hotbits/>
+      <Hotbids/>
 
 
       <div className='flex items-center justify-between w-full h-[64px]'>

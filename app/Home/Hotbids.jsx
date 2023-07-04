@@ -21,7 +21,7 @@ const Hotbits = () => {
         },
     ]
   return (
-    <div className='flex flex-row gap-6  w-full overflow-hidden h-[50%] overflow-x-visible scroll-x'>
+    <div className='flex flex-row gap-6  w-full overflow-hidden  overflow-x-visible scroll-x'>
      {arr.map((item,i)=>(
         <div key={i} className='flex flex-col gap-2 min-w-[25%] h-min min-h-[90%] bg-white rounded-2xl p-3'>
         <div className="flex justify-end mb-1 h-auto w-auto relative">

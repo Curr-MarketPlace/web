@@ -14,7 +14,7 @@ const index = () => {
       const handleOnClose = ()=> setshowMyModal(false)
       
   return (
-    <div className="bg-[#F9F6FE] overflow-y-auto h-[100%] w-[25%] flex flex-col items-center relative ">
+    <div className="bg-[#F9F6FE]  h-[100%] w-[25%] flex flex-col items-center relative ">
       <div className="w-full min-h-[12%] flex justify-end items-center gap-5 pr-6">
 
       <ConnectButton.Custom>
@@ -123,14 +123,15 @@ const index = () => {
           <Image src={"/unnamed.jpg"} alt="asd" className="rounded-full object-cover" width={38} height={38} />
          
         </div>
-      </div>
 
+        
+      </div>
+      <div className="overflow-y-auto w-full h-full flex flex-col items-center relative">
       <SettingsModal onClose={handleOnClose}  visible={showMyModal}/>
       <Topcreator/>
       <Featuredcreators/>
       <History/>
-     
-
+      </div>
     </div>
   );
 };
