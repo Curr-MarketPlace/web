@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { useRouter } from "next/navigation";
 const arr = [
   { title: "My Portfolio" },
   { title: "Wallet" },
@@ -7,19 +8,18 @@ const arr = [
   { title: "History" },
   { title: "Settings" },
 ];
-const Topbar = () => {
-  const textStyle = {
-    background: "linear-gradient(105.26deg, #3E06D6 0%, #901BB7 100%)",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-    backgroundClip: "text",
-    textFillColor: "transparent",
-  };
-
+const Topbar = ({setDisplay}) => {
+  const router = useRouter();
   return (
-    <div className="flex flex-col  gap-4 items-start p-0 w-full h-auto">
+    <div className="flex flex-col  gap-4 items-start p-0 w-full h-auto" >
       {arr.map((i,index) => (
-        <div key={index} className="flex flex-row  w-full justify-start gap-4 pl-8 cursor-pointer">
+        <div key={index}
+        
+        onClick={()=>{
+          router.push(`/${i.title}`)
+          setDisplay.set(false)
+        }}
+         className="flex flex-row  w-full justify-start gap-4 pl-8 cursor-pointer" >
           <Image src={"/vector.png"} alt="asd" width={20} height={20} />
           <div className="text-style !text-sm font-semibold ">{i.title}</div>
         </div>

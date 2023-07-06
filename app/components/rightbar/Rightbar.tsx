@@ -7,12 +7,16 @@ import Featuredcreators from "./Featuredcreators";
 import History from "./History";
 import SettingsModal from "./comp/SettingsModal"
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { useStorken } from "@/data/storken";
 
 const index = () => {
   const [showMyModal, setshowMyModal] = useState(false)
 
       const handleOnClose = ()=> setshowMyModal(false)
-      
+      const [display, setDisplay] = useStorken<any>("displayRightBar");
+if(!display){
+  return null
+}
   return (
     <div className="bg-[#F9F6FE]  h-[100%] w-[25%] flex flex-col items-center relative ">
       <div className="w-full min-h-[12%] flex justify-end items-center gap-5 pr-6">
@@ -137,3 +141,7 @@ const index = () => {
 };
 
 export default index;
+
+
+
+

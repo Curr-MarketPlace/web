@@ -6,9 +6,12 @@ import Mainitems from "./Mainitems";
 import Button from "../buttons/Button";
 import { FaReact } from "react-icons/fa";
 import {useRouter} from "next/navigation"
+import { useStorken } from "@/data/storken";
 // import Baritemstop from "@/components/Baritemstop"
 
 const LeftBar = () => {
+
+
   const textStyle = {
     background: "linear-gradient(105.26deg, #3E06D6 0%, #901BB7 100%)",
     WebkitBackgroundClip: "text",
@@ -16,9 +19,13 @@ const LeftBar = () => {
     backgroundClip: "text",
     textFillColor: "transparent",
   };
+
+
+  const [display, setDisplay] = useStorken<Boolean>("displayRightBar");
+
  const router = useRouter()
   return (
-    <div className=" h-screen w-[18%] flex flex-col items-start ">
+    <div className="bg-white h-screen w-[18%] flex flex-col items-start ">
       <div
       onClick={()=>router.push("/")}
         style={textStyle}
@@ -29,10 +36,10 @@ const LeftBar = () => {
       </div>
 
       <div className="flex flex-col items-center p-0 mt-14 gap-5 w-full h-auto">
-        <Mainitems />
+        <Mainitems setDisplay={setDisplay} />
 
         <div className="font-bold text-xl w-10/12">Profile</div>
-        <Profileitems />
+        <Profileitems setDisplay={setDisplay} />
 
       </div>
       <div className=" flex items-end justify-center w-full h-full">

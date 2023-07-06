@@ -7,6 +7,7 @@ export const [Storken, { useStorken }] = createStore({
     testStorken: "" as any,
     contract: "" as any,
     amount: "" as any,
+    displayRightBar: true as boolean
   },
 });
 
