@@ -73,7 +73,7 @@ className=" w-full p-3 pl-14 focus:outline-double focus:outline-[#901BB7] text-s
         }
 
         return (
-          <div style={{ display: 'flex', gap: 12 }} className='bg-white border border-2 p-2 border-[#901BB7] rounded-lg'>
+          <div style={{ display: 'flex', gap: 12 }} className='bg-white border-2 p-2 border-[#901BB7] rounded-lg'>
             <button
               onClick={openChainModal}
               style={{ display: 'flex', alignItems: 'center' }}
