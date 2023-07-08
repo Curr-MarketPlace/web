@@ -42,7 +42,7 @@ const Topcreator = () => {
       <span className='font-bold text-base'>Top Creator</span>
       <span className='text-xs text-[#616161]'>See All</span>
     </div>
-    <div className="min-h-auto max-h-[40%] w-[90%] gap-3 my-3 flex flex-col   rounded-2xl p-4 bg-white">
+    <div className=" h-auto w-[90%] gap-3 my-3 flex flex-col   rounded-2xl p-4 bg-white">
       {
         Topcreatorarr.map((item,index)=>(
           <div key={index} className='flex  w-full items-center gap-2 h-[40px] '>

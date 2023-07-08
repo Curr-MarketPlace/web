@@ -11,7 +11,7 @@ const Featuredcreators = () => {
       <span className='text-xs text-[#616161]'>See All</span>
     </div>
 
-    <div className="min-h-auto p-4 w-[90%] flex flex-col rounded-2xl bg-white">
+    <div className="h-auto p-4 w-[90%] flex flex-col rounded-2xl bg-white relative">
     <div className='flex  mb-3  gap-2 px-4 w-full items-center  h-[40px] '>
           <Image
           src={"/Ellipse2.png"}

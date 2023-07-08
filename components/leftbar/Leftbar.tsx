@@ -23,7 +23,7 @@ const LeftBar = () => {
 
   const [display, setDisplay] = useStorken<Boolean>("displayRightBar");
 
- const router = useRouter()
+  const router = useRouter()
   return (
     <div className="bg-white h-screen w-[18%] flex flex-col items-start ">
       <div
