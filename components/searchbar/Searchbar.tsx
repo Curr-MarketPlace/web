@@ -57,7 +57,7 @@ className=" w-full p-3 pl-14 focus:outline-double focus:outline-[#901BB7] text-s
       {(() => {
         if (!connected) {
           return (
-            <button className="connectWallet bg-white py-2 px-3 rounded-lg 
+            <button className="connectWallet bg-white py-2 px-3 rounded-lg dark:text-white dark:bg-[#D463F9]
              text-[#901BB7] font-semibold text-xs" onClick={openConnectModal} type="button">
               Connect Wallet
             </button>
@@ -68,16 +68,16 @@ className=" w-full p-3 pl-14 focus:outline-double focus:outline-[#901BB7] text-s
           return (
             <button onClick={openChainModal} type="button">
               Wrong network
-            </button>
+            </button>    
           );
         }
 
         return (
-          <div style={{ display: 'flex', gap: 12 }} className='bg-white border-2 p-2 border-[#901BB7] rounded-lg'>
+          <div style={{ display: 'flex', gap: 12 }} className='dark:bg-[#D463F9] first-letter:bg-white border-2 p-2 border-[#901BB7] rounded-lg'>
             <button
               onClick={openChainModal}
               style={{ display: 'flex', alignItems: 'center' }}
-              className='hover:bg-gray-200 rounded-md '
+              className='dark:hover:bg-purple-500 hover:bg-gray-200 rounded-md '
               type="button"
             >
               {chain.hasIcon && (
@@ -104,7 +104,7 @@ className=" w-full p-3 pl-14 focus:outline-double focus:outline-[#901BB7] text-s
             </button>
 
             <button onClick={openAccountModal} 
-              className='flex flex-row items-center gap-1 hover:bg-gray-200 rounded-md -m-[2px]'
+              className='flex flex-row items-center gap-1 dark:hover:bg-purple-500 hover:bg-gray-200 rounded-md -m-[2px]'
             
             type="button">
               {account.displayName}

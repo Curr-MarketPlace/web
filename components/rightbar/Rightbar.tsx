@@ -17,7 +17,7 @@ if(!display){
   return null
 }
   return (
-    <div className="bg-[#F9F6FE] min-h-[88%]  overflow-y-auto min-w-[30%] flex flex-col items-center  ">
+    <div className=" min-h-[88%]  overflow-y-auto min-w-[30%] flex flex-col items-center  ">
     
       <div className=" w-full  h-full flex flex-col items-center ">
       <SettingsModal onClose={handleOnClose}  visible={showMyModal}/>

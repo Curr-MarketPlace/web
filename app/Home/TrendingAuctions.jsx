@@ -40,6 +40,7 @@ const TrendingAuctions = () => {
          <Image
          src={item.image}
          alt='asd'
+         className='border border-[#D463F9] rounded-xl'
          height={200}
          width={200}
          />

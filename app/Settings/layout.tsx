@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-import RightBar from '@/components/rightbar/Rightbar'
 import {useRouter} from "next/navigation"
 import {BiUser,BiBell,BiBrush} from "react-icons/bi"
 const SettingsLayout = ({children}:{children:React.ReactNode}) => {
@@ -29,7 +28,7 @@ const SettingsLayout = ({children}:{children:React.ReactNode}) => {
           </button>
           
         </div>
-        <div className='h-full w-[58vw] bg-white rounded-md'>
+        <div className='h-full w-[58vw] p-4 bg-white rounded-md'>
         {children}
         </div>
     </div>

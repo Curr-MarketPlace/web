@@ -4,10 +4,10 @@ import Hotbids from "./Hotbids"
 import TrendingAuctions from "./TrendingAuctions"
 const page = () => {
   return (  
-    <div className='bg-[#F9F6FE] h-[100%]  overflow-y-auto ' >
+    <div className=' h-[100%]  overflow-y-auto ' >
       <MainCard/>
       <div className='flex items-center justify-between w-full h-[64px]'>
-           <span className='font-semibold text-base text-black'>Hot bids</span>
+           <span className='font-semibold text-base '>Hot bids</span>
            <div className='flex flex-row gap-4'>
            
            <button className="btn">Art</button>
@@ -22,7 +22,7 @@ const page = () => {
 
 
       <div className='flex items-center justify-between w-full h-[64px]'>
-           <span className='font-semibold text-base text-black'>Trending Auctions</span>
+           <span className='font-semibold text-base '>Trending Auctions</span>
       </div>
 
       <TrendingAuctions/>

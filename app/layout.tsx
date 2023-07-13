@@ -1,15 +1,16 @@
 "use client";
+import "./globals.css";
+import { Inter } from "next/font/google";
+
 import LeftBar from "@/components/leftbar/Leftbar";
 import Rightbar from "@/components/rightbar/Rightbar";
 import Searchbar from "@/components/searchbar/Searchbar";
-
-import "./globals.css";
-import { Inter } from "next/font/google";
+import { ThemeProvider } from "next-themes"
+import type { AppProps } from 'next/app'
 
 // ******* Wallet Kitt**** 
 
 import "@rainbow-me/rainbowkit/styles.css";
-
 import {
   getDefaultWallets,
   RainbowKitProvider,
@@ -57,10 +58,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
   etc: any;
+  
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={` ${inter.className}`}>
+      <ThemeProvider attribute="class">
         <WagmiConfig config={wagmiConfig}>
           <RainbowKitProvider
             chains={chains}
@@ -74,7 +77,7 @@ export default function RootLayout({
             })}
             {...etc}
           >
-            <div className="flex fixed  bg-[#F9F6FE]  h-full w-full">
+            <div className="flex fixed dark:bg-gray-900 bg-[#F9F6FE]  h-full w-full">
               <LeftBar />
               <div className="flex h-full w-[82%] flex-col">
                 <Searchbar />
@@ -89,6 +92,7 @@ export default function RootLayout({
             </div>
           </RainbowKitProvider>
         </WagmiConfig>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -25,7 +25,7 @@ const LeftBar = () => {
 
   const router = useRouter()
   return (
-    <div className="bg-white h-screen w-[18%] flex flex-col items-start ">
+    <div className="bg-white dark:bg-black h-screen w-[18%] flex flex-col items-start ">
       <div
       onClick={()=>router.push("/")}
         style={textStyle}
