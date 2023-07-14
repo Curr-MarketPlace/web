@@ -35,7 +35,7 @@ const MarketItem = () => {
   return (
     <>
       {arr.map((items,i) => (
-        <div key={i} className=" flex flex-col items-start rounded-2xl gap-2  p-3 justify-start w-[220px] h-[300px] bg-white">
+        <div key={i} className=" flex flex-col items-start rounded-2xl gap-2  p-3 justify-start w-[220px] h-[300px] dark:bg-black bg-white">
           <div className="flex justify-end  h-auto w-auto relative">
             <button className="flex items-center justify-center absolute rounded-full h-7 w-7 m-2 bg-white">
               <HiOutlineHeart
@@ -43,15 +43,15 @@ const MarketItem = () => {
               size={20}
               /> 
             </button>
-            <Image src={"/Market.png"} alt="market" width={196} height={201} />
+            <Image src={"/Market.png"} alt="market" width={196} height={201} className="border border-[#D463F9] rounded-xl" />
           </div>
            
           <div className='text-item1 w-full flex justify-between items-center'>
            <span className='text-xs font-semibold'>Ape Loves</span>
-           <span className='text-[#616161] text-xs font-medium'>12.2k fav</span>
+           <span className='text-[#616161] text-xs font-medium dark:text-[#D463F9]'>12.2k fav</span>
          </div>
          <div className='text-item2 flex justify-start items-center'>
-           <span className='text-[#616161] text-[10px] font-medium'>@Joker</span>
+           <span className='text-[#616161] text-[10px] font-medium dark:text-[#D463F9]'>@Joker</span>
          </div>
          <div className='text-item1 w-full flex justify-between items-center'>
            <span className='text-xs font-medium'>Current bid</span>

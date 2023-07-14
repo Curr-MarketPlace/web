@@ -10,9 +10,9 @@ const page = () => {
            <span className='font-semibold text-base '>Hot bids</span>
            <div className='flex flex-row gap-4'>
            
-           <button className="btn">Art</button>
-           <button className="btn">Music</button>
-           <button className="btn">Utility</button>
+           <button className="btn dark:bg-[#121212] dark:text-white">Art</button>
+           <button className="btn dark:bg-[#121212] dark:text-white">Music</button>
+           <button className="btn dark:bg-[#121212] dark:text-white">Utility</button>
 
            </div>
 

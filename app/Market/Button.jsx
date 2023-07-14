@@ -3,11 +3,11 @@ import React from 'react'
 const Button = () => {
   return (
     <div className='flex  gap-2'>
-        <button className="btn !rounded-lg !bg-white ">All</button>
-           <button className="btn !rounded-lg !bg-white">Art</button>
-           <button className="btn !rounded-lg !bg-white">Gaming</button>
-           <button className="btn !rounded-lg !bg-white">Photography</button>
-           <button className="btn !rounded-lg !bg-white">Music</button>
+        <button className="btn !rounded-lg !bg-white dark:!bg-[#121212] dark:text-white ">All</button>
+           <button className="btn !rounded-lg !bg-white dark:!bg-[#121212] dark:text-white">Art</button>
+           <button className="btn !rounded-lg !bg-white dark:!bg-[#121212] dark:text-white">Gaming</button>
+           <button className="btn !rounded-lg !bg-white dark:!bg-[#121212] dark:text-white">Photography</button>
+           <button className="btn !rounded-lg !bg-white dark:!bg-[#121212] dark:text-white">Music</button>
     </div>
   )
 }

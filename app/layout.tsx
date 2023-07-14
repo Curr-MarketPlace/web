@@ -77,7 +77,7 @@ export default function RootLayout({
             })}
             {...etc}
           >
-            <div className="flex fixed dark:bg-gray-900 bg-[#F9F6FE]  h-full w-full">
+            <div className="flex fixed dark:bg-[#121212] bg-[#F9F6FE]  h-full w-full">
               <LeftBar />
               <div className="flex h-full w-[82%] flex-col">
                 <Searchbar />
