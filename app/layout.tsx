@@ -79,18 +79,18 @@ export default function RootLayout({
           >
             <div className="flex fixed dark:bg-[#121212] bg-[#F9F6FE]  h-full w-full">
               <LeftBar />
-              <div className="flex h-full w-[82%] flex-col">
+              <div className="flex h-full w-[82vw] flex-col">
                 <Searchbar />
 
-                <div className="flex flex-row pb-6 h-[88%] w-full">
-                  <div className="main-children pl-6  flex flex-col items-end min-h-[88%] h-full min-w-[70%] w-full">
+                <div className="flex flex-row pb-6 h-[88vh] w-full">
+                  <div className="main-children pl-6  flex flex-col items-end min-h-[77vh] h-full min-w-[57vw] w-full">
                     {children}
                   </div>
                   <Rightbar />
                 </div>
               </div>
             </div>
-          </RainbowKitProvider>
+          </RainbowKitProvider> 
         </WagmiConfig>
         </ThemeProvider>
       </body>

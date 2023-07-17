@@ -39,10 +39,7 @@ const Bottombar = ({setDisplay}) => {
           {/* <FaReact width={20} height={20} style={style}  /> */}
           <Image src={"/vector.png"} alt="asd" width={20} height={20} />
 
-          <div className="text-style text-[#616161] !text-sm font-semibold 
-          
-          bg-gradient-to-l hover:from-purple-600  hover:to-indigo-700  dark:hover:from-pinkGrad-100  dark:hover:bg-gradient-to-l dark:hover:to-pinkGrad-100 
-          ">
+          <div className="textStyle ">
             {i.title}
           </div>
         </div>

@@ -51,23 +51,22 @@ body,
       /* Özel odak çerçevesi rengi ve diğer stiller burada */
     }
   }
+
+   .textStyle {
+    @apply bg-clip-text text-transparent bg-[#616161] dark:bg-white text-sm font-semibold ;
+
+    /* Diğer stiller burada */
+
+    /* Focus Stilleri */
+    &:hover {
+      outline: none;
+      @apply bg-gradient-to-l hover:from-purple-600  hover:to-indigo-700  dark:hover:from-pinkGrad-100  dark:hover:bg-gradient-to-l dark:hover:to-pinkGrad-100 
+      /* Özel odak çerçevesi rengi ve diğer stiller burada */
+    }
+  }
+ 
 }
 
-/* .btn {
-  color: #616161;
-  background-color: #F9F6FE;
-  outline: none;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 25px;
-  padding: 0.25rem 0.5rem;
-}
-
-.btn:focus {
-  color: #F9F6FE;
-  background: linear-gradient(105.26deg, #3E06D6 0%, #901BB7 100%);
-} */
 
 
 ::-webkit-scrollbar {
