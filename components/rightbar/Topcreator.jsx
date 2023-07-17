@@ -40,7 +40,7 @@ const Topcreator = () => {
     <>
     <div className='flex justify-between items-center  w-[90%] h-6'>
       <span className='font-bold text-base'>Top Creator</span>
-      <span className='text-xs dark:text-[#D463F9] text-[#616161]'>See All</span>
+      <span className='text-xs dark:text-[#D463F9] text-[#616161] cursor-pointer'>See All</span>
     </div>
     <div className=" h-auto w-[90%] gap-3 my-3 flex flex-col   rounded-2xl p-4 dark:bg-black bg-white ">
       {

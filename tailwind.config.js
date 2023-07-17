@@ -8,6 +8,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        pinkGrad:{
+          100: "#D463F9",
+        },
+      },
+      linearGradientColors: {
+        'custom-gradient': '105.26deg, #3E06D6, #901BB7',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

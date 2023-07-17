@@ -23,7 +23,7 @@ const History = () => {
 <>
 <div className='flex justify-between items-center w-[90%]  my-3 '>
       <span className='font-bold text-base'>History</span>
-      <span className='text-xs dark:text-[#D463F9] text-[#616161]'>See All</span>
+      <span className='text-xs dark:text-[#D463F9] text-[#616161] cursor-pointer'>See All</span>
     </div>
 <div className=' min-h-[18%] w-[90%] flex flex-col mb-6 rounded-2xl gap-3 '>
 {

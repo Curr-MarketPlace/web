@@ -8,7 +8,7 @@ const Featuredcreators = () => {
 <>
 <div className='flex justify-between items-center w-[90%]  my-3 '>
       <span className='font-bold text-base'>Featured Creators</span>
-      <span className='text-xs text-[#616161] dark:text-[#D463F9]'>See All</span>
+      <span className='text-xs text-[#616161] dark:text-[#D463F9] cursor-pointer'>See All</span>
     </div>
 
     <div className="h-auto p-4 w-[90%] flex flex-col rounded-2xl dark:bg-black bg-white relative">
@@ -25,7 +25,7 @@ const Featuredcreators = () => {
             <div className='text-[10px] dark:text-[#D463F9]'>@melihkaanarc</div>
           </div>
 
-          <BiDotsHorizontalRounded size={24} />
+          <BiDotsHorizontalRounded size={24} className='cursor-pointer' />
       </div>
       <div className='flex flex-row h-full w-auto gap-6 justify-center '>
       <div className='item-1 gap-1 w-[42%] h-[95%] flex flex-col '>

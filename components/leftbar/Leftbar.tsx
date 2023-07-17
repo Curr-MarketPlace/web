@@ -7,6 +7,7 @@ import Button from "../buttons/Button";
 import { FaReact } from "react-icons/fa";
 import {useRouter} from "next/navigation"
 import { useStorken } from "@/data/storken";
+import Link from "next/link";
 // import Baritemstop from "@/components/Baritemstop"
 
 const LeftBar = () => {
@@ -25,15 +26,19 @@ const LeftBar = () => {
 
   const router = useRouter()
   return (
-    <div className="bg-white dark:bg-black h-screen w-[18%] flex flex-col items-start ">
-      <div
-      onClick={()=>router.push("/")}
-        style={textStyle}
-        className=" mt-8 gap-5  font-extrabold lg:text-lg w-full flex items-center justify-center cursor-pointer"
+    <div className="bg-white  dark:bg-black h-screen w-[18%] flex flex-col items-start ">
+      <Link
+        href={"/"}
+        className=" mt-8 gap-5 
+        
+        font-extrabold lg:text-lg w-full flex items-center justify-center cursor-pointer"
       >
         <Image src={"/vector.png"} alt="asd" width={35} height={35} />
+       
+       <p className=" text-transparent  bg-clip-text bg-gradient-to-l from-purple-600  to-indigo-700  dark:from-pinkGrad-100  dark:bg-gradient-to-l dark:to-pinkGrad-100  ">
         Curr Marketplace
-      </div>
+        </p>
+      </Link>
 
       <div className="flex flex-col items-center p-0 mt-14 gap-5 w-full h-auto">
         <Mainitems setDisplay={setDisplay} />

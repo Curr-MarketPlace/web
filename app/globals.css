@@ -17,6 +17,9 @@ body,
   height: 100%;
 }
 
+
+
+
 .text-style {
   background: #616161;
   -webkit-background-clip: text;
@@ -32,8 +35,25 @@ body,
 }
 
 
+@layer components {
+  .miniButtons {
+    @apply text-gray-600 bg-gray-100 outline-none text-center text-sm font-medium rounded-2xl px-2 py-1;
 
-.btn {
+    /* Diğer stiller burada */
+
+    /* Focus Stilleri */
+    &:focus {
+      outline: none;
+      @apply text-white
+            bg-gradient-to-l from-purple-600  to-indigo-700
+            dark:bg-gradient-to-l dark:from-pinkGrad-100  dark:to-pinkGrad-100 
+            ; 
+      /* Özel odak çerçevesi rengi ve diğer stiller burada */
+    }
+  }
+}
+
+/* .btn {
   color: #616161;
   background-color: #F9F6FE;
   outline: none;
@@ -47,7 +67,7 @@ body,
 .btn:focus {
   color: #F9F6FE;
   background: linear-gradient(105.26deg, #3E06D6 0%, #901BB7 100%);
-}
+} */
 
 
 ::-webkit-scrollbar {

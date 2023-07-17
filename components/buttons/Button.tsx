@@ -21,10 +21,14 @@ const Button: React.FC<ButtonProps> = ({
   // outLine,
   // icon:Icon
 }) => {
-  return (
+  return (  
     <button
-    style={{ background: 'linear-gradient(105.26deg, #3E06D6 0%, #901BB7 100%)'}}
-      className={`flex gap-2 items-center  hover:opacity-90 text-white  
+    //bg-gradient-to-l  from-purple-600  to-indigo-700 
+    
+    //  style={{ background: 'linear-gradient(105.26deg, #3E06D6 0%, #901BB7 100%)'}}
+      className={`flex gap-2 items-center hover:opacity-90 text-white  
+      dark:from-pinkGrad-100  dark:bg-gradient-to-l dark:to-pinkGrad-100 
+      bg-gradient-to-l  from-purple-600  to-indigo-700
        ${rounded} ${mainButton?`py-2 px-6 text-base`:`py-1 px-4 text-sm`} my-6 `}
     >
       {Icon && <Icon size={15} />}
