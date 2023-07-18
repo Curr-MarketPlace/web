@@ -14,7 +14,7 @@ const TrendingAuctions = () => {
             balance:"3400.5"
         }, {
             image:"/Trending3.png",
-            name:"Atesh",
+            name:"Kbes",
             balance:"2250.25"
         },
         {
@@ -24,10 +24,10 @@ const TrendingAuctions = () => {
         }
     ]
   return (
-    <div className='flex flex-row w-full h-auto '>
+    <div className='grid grid-cols-2 md:flex flex-row w-full h-auto bg-red-600 '>
      {arr.map((item,index)=>(
         <div key={index} className='flex flex-col w-full items-start h-full '>
-        <div className='flex items-center justify-center relative w-auto h-auto mb-1'>
+        <div className='flex items-center justify-center relative  md:w-44 md:h-44 mb-1'>
             <div className='flex flex-col items-center justify-center text-white absolute gap-2 opacity-100'>
             <span className='font-semibold text-xl'>
                {item.name}

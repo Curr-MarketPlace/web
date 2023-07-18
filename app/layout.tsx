@@ -20,6 +20,7 @@ import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { mainnet, polygon, optimism, arbitrum, zora } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
+import BottomBar from "@/components/bottomBar/BottomBar";
 
 const { chains, publicClient } = configureChains(
   [mainnet, polygon, optimism, arbitrum, zora],
@@ -67,7 +68,7 @@ export default function RootLayout({
         <WagmiConfig config={wagmiConfig}>
           <RainbowKitProvider
             chains={chains}
-            coolMode
+            coolMode  
             theme={lightTheme({
               accentColor: "#7b3fe4",
               accentColorForeground: "white",
@@ -77,22 +78,29 @@ export default function RootLayout({
             })}
             {...etc}
           >
-            <div className="flex fixed dark:bg-[#121212] bg-[#F9F6FE]  h-full w-full">
-              <LeftBar />
-              <div className="flex h-full w-[82vw] flex-col">
+           <main>
+            <div className="flex fixed dark:bg-[#121212] bg-[#F9F6FE]  md:h-full w-full">
+              <LeftBar /> 
+              <div className="flex h-full w-[100vw] md:w-[82vw]  flex-col">
                 <Searchbar />
 
-                <div className="flex flex-row pb-6 h-[88vh] w-full">
-                  <div className="main-children pl-6  flex flex-col items-end min-h-[77vh] h-full min-w-[57vw] w-full">
+                <div className="flex flex-col md:flex-row md:pb-6 h-v[100vh] md:h-[88vh] w-full bg-blue-600">
+                  <div className="main-children md:pl-6 px-5 flex flex-col items-end h-[70vh]  md:min-h-[77vh] md:min-w-[57vw] w-full">
                     {children}
+
                   </div>
+                  <BottomBar/>
+                  
                   <Rightbar />
                 </div>
               </div>
             </div>
+            </main>
           </RainbowKitProvider> 
         </WagmiConfig>
         </ThemeProvider>
+         
+           
       </body>
     </html>
   );

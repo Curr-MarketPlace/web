@@ -26,7 +26,7 @@ const LeftBar = () => {
 
   const router = useRouter()
   return (
-    <div className="bg-white  dark:bg-black h-screen w-[18%] flex flex-col items-start ">
+    <div className="bg-white  dark:bg-black h-screen w-[18%] hidden md:flex flex-col items-start ">
       <Link
         href={"/"}
         className=" mt-8 gap-5 
