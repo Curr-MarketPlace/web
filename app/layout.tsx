@@ -64,8 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${inter.className}`}>
-      <ThemeProvider attribute="class">
-        <WagmiConfig config={wagmiConfig}>
+        {/* <WagmiConfig config={wagmiConfig}>
           <RainbowKitProvider
             chains={chains}
             coolMode  
@@ -78,14 +77,21 @@ export default function RootLayout({
             })}
             {...etc}
           >
-           <main>
-            <div className="flex fixed dark:bg-[#121212] bg-[#F9F6FE]  md:h-full w-full">
+          
+          </RainbowKitProvider> 
+        </WagmiConfig> */}
+
+
+      <ThemeProvider attribute="class">
+         
+        <main>
+            <div className="flex fixed dark:bg-red-700 bg-[#F9F6FE]  h-[100vh] w-[100vw]">
               <LeftBar /> 
-              <div className="flex h-full w-[100vw] md:w-[82vw]  flex-col">
+              <div className="flex  h-full w-[100vw] md:w-[82vw]  flex-col">
                 <Searchbar />
 
-                <div className="flex flex-col md:flex-row md:pb-6 h-v[100vh] md:h-[88vh] w-full bg-blue-600">
-                  <div className="main-children md:pl-6 px-5 flex flex-col items-end h-[70vh]  md:min-h-[77vh] md:min-w-[57vw] w-full">
+                <div className="flex flex-col md:flex-row md:pb-6 h-[100vh]  md:h-[88vh] w-full ">
+                  <div className="main-children md:pl-6 px-5 flex flex-col items-end h-[70vh] md:h-full  md:min-h-[77vh] md:min-w-[57vw] w-full">
                     {children}
 
                   </div>
@@ -96,11 +102,8 @@ export default function RootLayout({
               </div>
             </div>
             </main>
-          </RainbowKitProvider> 
-        </WagmiConfig>
         </ThemeProvider>
-         
-           
+
       </body>
     </html>
   );
