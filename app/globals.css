@@ -92,9 +92,10 @@ body,
   width: 15px !important;
   height: 15px !important;
   background-color: white !important; /* İçi beyaz renkte bir arka plan ekler */
-  border: 3px solid ;
+  border: 3px solid darkviolet ;
   color:darkblue !important ;
   border-radius: 50px !important;
+  
 }
 
 .swiper-pagination-bullet-active{

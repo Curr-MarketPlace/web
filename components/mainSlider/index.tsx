@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import {Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
 
 export default function App() {
@@ -44,12 +44,16 @@ export default function App() {
       <Swiper
       slidesPerView={'auto'}
       navigation
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
       pagination={{
         clickable: true,
        bulletClass: `swiper-pagination-bullet `
       }}  
-        modules={[Pagination]}
-        className="mySwiper w-full h-[30vh] md:h-[58vh]"
+        modules={[Autoplay,Pagination]}
+        className="mySwiper w-full h-[30vh] md:h-[58vh] "
       >
         <SwiperSlide>
           <Image src={"/ad-card.png"} alt="card"   className="flex pb-[5vh] md:pb-[8vh]" fill={true}/>

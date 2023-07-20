@@ -31,11 +31,32 @@ const MarketItem = () => {
     {
       img: "/Market.png",
     },
+    {
+      img: "/Market.png",
+    },
+    {
+      img: "/Market.png",
+    },
+    {
+      img: "/Market.png",
+    },
+    {
+      img: "/Market.png",
+    },
+    {
+      img: "/Market.png",
+    },
+    {
+      img: "/Market.png",
+    },
+    {
+      img: "/Market.png",
+    },
   ];
   return (
     <>
       {arr.map((items,i) => (
-        <div key={i} className=" flex flex-col items-start rounded-2xl gap-2  p-3 justify-start w-[220px] h-[300px] dark:bg-black bg-white">
+        <div key={i} className=" flex flex-col items-start rounded-2xl gap-2  p-3 justify-start w-auto h-auto dark:bg-black bg-white">
           <div className="flex justify-end  h-auto w-auto relative">
             <button className="flex items-center justify-center absolute rounded-full h-7 w-7 m-2 bg-white">
               <HiOutlineHeart
