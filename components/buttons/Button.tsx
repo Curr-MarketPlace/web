@@ -23,9 +23,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (  
     <button
-    //bg-gradient-to-l  from-purple-600  to-indigo-700 
     
-    //  style={{ background: 'linear-gradient(105.26deg, #3E06D6 0%, #901BB7 100%)'}}
       className={`flex gap-2 items-center hover:opacity-90 text-white  
       dark:from-pinkGrad-100  dark:bg-gradient-to-l dark:to-pinkGrad-100 
       bg-gradient-to-l  from-purple-600  to-indigo-700

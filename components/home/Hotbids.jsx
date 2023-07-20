@@ -23,7 +23,7 @@ const Hotbits = () => {
   return (
     <div className='flex flex-row gap-6  w-full overflow-hidden  overflow-x-visible scroll-x'>
      {arr.map((item,i)=>(
-        <div key={i} className='flex flex-col gap-2 min-w-[25%] h-min min-h-[90%] dark:bg-black bg-white rounded-2xl p-3'>
+        <div key={i} className='flex flex-col gap-2 min-w-[50vw] md:min-w-[15vw] h-min min-h-[90%] dark:bg-black bg-white rounded-2xl p-3'>
         <div className="flex justify-end mb-1 h-auto w-auto relative">
             <button className="flex items-center justify-center absolute rounded-full h-7 w-7 m-2 bg-white">
               <HiOutlineHeart

@@ -16,7 +16,6 @@ const arr2 = [
 
 const Bottombar = ({setDisplay}) => {
 
-  const style = { color: "#3E06D6", fontSize: "1.2em" };
   const router = useRouter();
    const [url, setUrl] = useState("/")
   return (

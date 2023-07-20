@@ -24,7 +24,7 @@ const TrendingAuctions = () => {
         }
     ]
   return (
-    <div className='grid grid-cols-2 md:flex flex-row w-full h-auto bg-red-600 '>
+    <div className='grid grid-cols-2 gap-3  md:flex flex-row w-full  h-auto '>
      {arr.map((item,index)=>(
         <div key={index} className='flex flex-col w-full items-start h-full '>
         <div className='flex items-center justify-center relative  md:w-44 md:h-44 mb-1'>
@@ -41,8 +41,8 @@ const TrendingAuctions = () => {
          src={item.image}
          alt='asd'
          className='border border-[#D463F9] rounded-xl'
-         height={200}
-         width={200}
+         height={250}
+         width={250}
          />
          </div>
        

@@ -7,37 +7,37 @@ import Rightbar from "@/components/rightbar/Rightbar";
 import Searchbar from "@/components/searchbar/Searchbar";
 import { ThemeProvider } from "next-themes"
 import type { AppProps } from 'next/app'
-
+import BottomBar from "@/components/bottomBar/BottomBar";
 // ******* Wallet Kitt**** 
 
-import "@rainbow-me/rainbowkit/styles.css";
-import {
-  getDefaultWallets,
-  RainbowKitProvider,
-  lightTheme,
-} from "@rainbow-me/rainbowkit";
-import { configureChains, createConfig, WagmiConfig } from "wagmi";
-import { mainnet, polygon, optimism, arbitrum, zora } from "wagmi/chains";
-import { alchemyProvider } from "wagmi/providers/alchemy";
-import { publicProvider } from "wagmi/providers/public";
-import BottomBar from "@/components/bottomBar/BottomBar";
+// import "@rainbow-me/rainbowkit/styles.css";
+// import {
+//   getDefaultWallets,
+//   RainbowKitProvider,
+//   lightTheme,
+// } from "@rainbow-me/rainbowkit";
+// import { configureChains, createConfig, WagmiConfig } from "wagmi";
+// import { mainnet, polygon, optimism, arbitrum, zora } from "wagmi/chains";
+// import { alchemyProvider } from "wagmi/providers/alchemy";
+// import { publicProvider } from "wagmi/providers/public";
+// 
 
-const { chains, publicClient } = configureChains(
-  [mainnet, polygon, optimism, arbitrum, zora],
-  [alchemyProvider({ apiKey: "process.env.ALCHEMY_ID" }), publicProvider()]
-);
+// const { chains, publicClient } = configureChains(
+//   [mainnet, polygon, optimism, arbitrum, zora],
+//   [alchemyProvider({ apiKey: "process.env.ALCHEMY_ID" }), publicProvider()]
+// );
 
-const { connectors } = getDefaultWallets({
-  appName: "My RainbowKit App",
-  projectId: "YOUR_PROJECT_ID",
-  chains,
-});
+// const { connectors } = getDefaultWallets({
+//   appName: "My RainbowKit App",
+//   projectId: "YOUR_PROJECT_ID",
+//   chains,
+// });
 
-const wagmiConfig = createConfig({
-  autoConnect: true,
-  connectors,
-  publicClient,
-});
+// const wagmiConfig = createConfig({
+//   autoConnect: true,
+//   connectors,
+//   publicClient,
+// });
 
 // ***** Wallet Kit *****
 const inter = Inter({
@@ -82,28 +82,28 @@ export default function RootLayout({
         </WagmiConfig> */}
 
 
-      <ThemeProvider attribute="class">
-         
-        <main>
-            <div className="flex fixed dark:bg-red-700 bg-[#F9F6FE]  h-[100vh] w-[100vw]">
-              <LeftBar /> 
-              <div className="flex  h-full w-[100vw] md:w-[82vw]  flex-col">
-                <Searchbar />
 
-                <div className="flex flex-col md:flex-row md:pb-6 h-[100vh]  md:h-[88vh] w-full ">
-                  <div className="main-children md:pl-6 px-5 flex flex-col items-end h-[70vh] md:h-full  md:min-h-[77vh] md:min-w-[57vw] w-full">
-                    {children}
-
-                  </div>
-                  <BottomBar/>
-                  
-                  <Rightbar />
-                </div>
-              </div>
-            </div>
-            </main>
-        </ThemeProvider>
-
+          <ThemeProvider attribute="class">
+         <main>
+             <div className="flex fixed dark:bg-[#121212] bg-[#F9F6FE]  h-[100vh] w-[100vw]">
+               <LeftBar /> 
+               <div className="flex h-full w-[100vw] md:w-[82vw] flex-col">
+                 <Searchbar />
+ 
+                 <div className="flex flex-col md:flex-row md:pb-6 h-[100vh]  md:h-[88vh] w-full ">
+                   <div className="main-children md:pl-6 px-5 flex flex-col items-end h-[80vh] md:h-full  md:min-h-[77vh] md:min-w-[57vw] w-full">
+                     {children}
+ 
+                   </div>
+                   <BottomBar/>
+                   
+                   <Rightbar />
+                 </div>
+               </div>
+             </div>
+             </main>
+</ThemeProvider>
+ 
       </body>
     </html>
   );

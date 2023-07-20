@@ -9,25 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@rainbow-me/rainbowkit": "^1.0.4",
     "@types/node": "20.3.0",
     "@types/react": "18.2.11",
     "@types/react-dom": "18.2.4",
-    "@walletconnect/modal": "^2.5.9",
+    "@types/react-slick": "^0.23.10",
     "autoprefixer": "10.4.14",
     "lokijs": "^1.5.12",
-    "next": "13.4.8",
+    "next": "13.4.10",
     "next-themes": "^0.2.1",
     "pino-pretty": "^10.0.1",
     "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.9.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "storken": "2.1.1-beta.9",
+    "swiper": "^10.0.4",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3",
-    "viem": "^1.2.7",
-    "wagmi": "^1.3.3"
+    "viem": "^1.2.7"
   },
   "devDependencies": {
     "postcss-import": "^15.1.0",
