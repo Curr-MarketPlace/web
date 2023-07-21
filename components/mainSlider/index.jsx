@@ -12,12 +12,12 @@ import {Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
 
 export default function App() {
-  const pagination = {
-    clickable: true,
-    // renderBullet: function (index, className) {
-    //   return '<span class="' + className + '  "> ' + (index + 1) + "</span>";
-    // },
-  };
+  // const pagination = {
+  //   clickable: true,
+  //   renderBullet: function ( index,className) {
+  //     return' <div class="!h-10 !w-full !text-lg !rounded-full !gap-5 !bg-red-700 !flex !flex-row !items-center !justify-center">  </div>'
+  //   },
+  // };
 
 // !border-2 !border-red-600 !h-4 !w-4 !bg-white hover:!bg-red-600
 
@@ -48,6 +48,7 @@ export default function App() {
         delay: 2500,
         disableOnInteraction: false,
       }}
+      // pagination={pagination}
       pagination={{
         clickable: true,
        bulletClass: `swiper-pagination-bullet `
