@@ -25,7 +25,8 @@ const History = () => {
       <span className='font-bold text-base'>History</span>
       <span className='text-xs dark:text-[#D463F9] text-[#616161] cursor-pointer'>See All</span>
     </div>
-<div className=' min-h-[18%] w-[90%] flex flex-col mb-6 rounded-2xl gap-3 '>
+    
+<div className=' min-h-[18%] w-full md:w-[90%] flex flex-col mb-6 rounded-2xl gap-3 '>
 {
   historyArr.map((item,i)=>(
     <div key={i} className='flex  w-full items-center gap-2 h-[40px] '>

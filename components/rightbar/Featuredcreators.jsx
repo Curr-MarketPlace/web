@@ -3,15 +3,15 @@ import React from 'react'
 import {BiDotsHorizontalRounded} from "react-icons/bi"
 import {FaEthereum} from "react-icons/fa"
 import Button from '../buttons/Button'
+import Header from './Header'
 const Featuredcreators = () => {
   return (
 <>
-<div className='flex justify-between items-center w-[90%]  my-3 '>
-      <span className='font-bold text-base'>Featured Creators</span>
-      <span className='text-xs text-[#616161] dark:text-[#D463F9] cursor-pointer'>See All</span>
-    </div>
+<Header
+title={"Featured Creators"}
+/>
 
-    <div className="h-auto p-4 w-[90%] flex flex-col rounded-2xl dark:bg-black bg-white relative">
+    <div className="h-auto p-4 w-full md:w-[90%] flex flex-col rounded-2xl dark:bg-black bg-white relative">
     <div className='flex  mb-3  gap-2 px-4 w-full items-center  h-[40px] '>
           <Image
           src={"/Ellipse2.png"}

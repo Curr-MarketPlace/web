@@ -2,6 +2,8 @@ import Topcreator from '@/components/rightbar/Topcreator'
 import Hotbids from '../components/Home/Hotbids'
 import MainSlider from '../components/home/MainSlider'
 import TrendingAuctions from '../components/home/TrendingAuctions'
+import Featuredcreators from '@/components/rightbar/Featuredcreators'
+import History from '@/components/rightbar/History'
 const page = () => {
   return (  
     <div className=' h-full w-full overflow-y-auto  ' >
@@ -27,8 +29,15 @@ const page = () => {
       </div>
 
         <TrendingAuctions/>
+        {/* responsive mobile right bar */}
        <div className='flex md:hidden flex-col pt-5'>
         <Topcreator/>
+        </div>
+        <div className='flex md:hidden flex-col pt-5'>
+        <Featuredcreators/>
+        </div>
+        <div className='flex md:hidden flex-col pt-5'>
+        <History/>
         </div>
         </div>
   )

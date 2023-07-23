@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
 import Button from '../buttons/Button'
+import Head from 'next/head'
+import Header from './Header'
 
 const Topcreatorarr=[
   {
@@ -38,12 +40,9 @@ const Topcreatorarr=[
 const Topcreator = () => {
   return (
     <>
-    <div className='flex justify-between items-center  w-[90%] h-6'>
-      <span className='font-bold text-base'>Top Creator</span>
-      <span className='text-xs dark:text-[#D463F9] text-[#616161] cursor-pointer hidden md:flex'>See All</span>
-    </div>
+   <Header title={"Topcreator"}/>
 
-    <div className="h-[23vh] md:min-h-[38vh] w-full md:w-[90%] gap-11  md:gap-3 my-3 p-4 flex flex-row md:flex-col overflow-x-auto md:overflow-y-auto md:rounded-2xl  md:dark:bg-black dark:bg-[#121212] bg-[#F9F6FE] md:bg-white">
+    <div className="h-[26vh] md:min-h-[38vh] w-full md:w-[90%] gap-12 md:gap-3 my-3 px-4 md:p-4 flex flex-row md:flex-col overflow-x-auto md:overflow-y-auto md:rounded-2xl  md:dark:bg-black dark:bg-[#121212] bg-[#F9F6FE] md:bg-white">
       {
         Topcreatorarr.map((item,index)=>(
           <div key={index} className='flex md:flex-row flex-col min-w-[18vw] md:w-full items-center gap-2 md:h-[40px]  '>
