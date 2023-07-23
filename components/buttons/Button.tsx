@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({
   rounded,
   size,
   icon: Icon,
-  mainButton
+  mainButton,
   // outLine,
   // icon:Icon
 }) => {
@@ -40,5 +40,8 @@ const Button: React.FC<ButtonProps> = ({
 };
 
 export default Button;
+
+
+
 
 
