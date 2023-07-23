@@ -1,70 +1,37 @@
+"use client"
 import Image from "next/image";
-import React from "react";
+import React,{useEffect, useState} from "react";
 import {HiOutlineHeart} from "react-icons/hi";
 import {FaEthereum} from "react-icons/fa"
-const MarketItem = () => {
-  const arr = [
-    {
-      img: "/Market.png",
-    },
-    {
-      img: "/Market.png",
-    },
-    {
-      img: "/Market.png",
-    },
-    {
-      img: "/Market.png",
-    },
-    {
-      img: "/Market.png",
-    },
-    {
-      img: "/Market.png",
-    },
-    {
-      img: "/Market.png",
-    },
-    {
-      img: "/Market.png",
-    },
-    {
-      img: "/Market.png",
-    },
-    {
-      img: "/Market.png",
-    },
-    {
-      img: "/Market.png",
-    },
-    {
-      img: "/Market.png",
-    },
-    {
-      img: "/Market.png",
-    },
-    {
-      img: "/Market.png",
-    },
-    {
-      img: "/Market.png",
-    },
-    {
-      img: "/Market.png",
-    },
-  ];
+const MarketItem = ({arrItem}) => {
+ 
+  // const handleClick = () => {
+  //   // const testArr = arr.splice(0,2);
+  //   // setFirstArr(testArr)
+  //   console.log('this is firstArr ', firstArr);
+  //   console.log('this is secondArr ', secondArr);
+  //   console.log('this is thirdArr ', thirdArr);
+  // };
   return (
     <>
-      {arr.map((items,i) => (
-        <div key={i} className=" flex flex-col items-start rounded-2xl gap-2  p-3 justify-start w-auto h-auto dark:bg-black bg-white">
-          <div className="flex justify-end  h-auto w-auto relative">
-            <button className="flex items-center justify-center absolute rounded-full h-7 w-7 m-2 bg-white">
+    <div className="md:flex md:flex-wrap grid grid-cols-2 gap-6  md:gap-9 h-full w-full">
+      {arrItem.map((items,i) => (
+        <div key={i} 
+        // onClick={handleClick}
+        className=" flex flex-col items-start rounded-2xl gap-2  p-3 justify-start w-auto h-auto dark:bg-black bg-white">
+          <div  className="flex justify-end  h-auto w-auto relative">
+            <div 
+              
+
+            className="flex items-center justify-center absolute rounded-full h-7 w-7 m-2 bg-white"
+        
+            >
               <HiOutlineHeart
               color="#616161"
               size={20}
               /> 
-            </button>
-            <Image src={"/Market.png"} alt="market" width={196} height={201} className="border border-[#D463F9] rounded-xl" />
+            </div>
+            <Image src={items.img} alt="market" width={196} height={201} className="border border-[#D463F9] rounded-xl" />
           </div>
            
           <div className='text-item1 w-full flex justify-between items-center'>
@@ -84,6 +51,7 @@ const MarketItem = () => {
 
         </div>
       ))}
+      </div>
     </>
   );
 };

@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import {BiDotsHorizontalRounded} from "react-icons/bi"
-import {FaEthereum} from "react-icons/fa"
-import Button from '../buttons/Button'
+import Header from './Header'
 const History = () => {
   const historyArr=[
     {
@@ -21,10 +19,10 @@ const History = () => {
   ]
   return (
 <>
-<div className='flex justify-between items-center w-[90%]  my-3 '>
-      <span className='font-bold text-base'>History</span>
-      <span className='text-xs dark:text-[#D463F9] text-[#616161] cursor-pointer'>See All</span>
-    </div>
+
+<Header
+title={"History"}
+/>
     
 <div className=' min-h-[18%] w-full md:w-[90%] flex flex-col mb-6 rounded-2xl gap-3 '>
 {
