@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = () => {
+const ButtonGroup = () => {
   return (
     <>
     <div className='flex flex-row gap-12  w-[100vw]'>
@@ -26,4 +26,4 @@ const Button = () => {
   )
 }
 
-export default Button
+export default ButtonGroup
