@@ -12,7 +12,7 @@ title={"Featured Creators"}
 />
 
     <div className="h-auto p-4 w-full md:w-[90%] flex flex-col rounded-2xl dark:bg-black bg-white relative">
-    <div className='flex  mb-3  gap-2 px-4 w-full items-center  h-[40px] '>
+    <div className='flex  mb-3  gap-2 px-4 w-full items-center  h-[20%] '>
           <Image
           src={"/Ellipse2.png"}
           alt='adss'
@@ -28,7 +28,7 @@ title={"Featured Creators"}
           <BiDotsHorizontalRounded size={24} className='cursor-pointer' />
       </div>
       <div className='flex flex-row h-full w-auto gap-6 justify-center '>
-      <div className='item-1 gap-1 w-[42%] h-[95%] flex flex-col '>
+      <div className='item-1 gap-1 w-[42%] h-auto flex flex-col '>
       <Image
           src={"/FatihSultanMehmed.png"}
           alt='adss'
@@ -48,7 +48,7 @@ title={"Featured Creators"}
              9.1 ETH
           </span>
       </div>
-      <div className='item-1 gap-1 w-[42%] h-[95%] flex flex-col '>
+      <div className='item-1 gap-1 w-[42%] h-auto flex flex-col '>
       <Image
           src={"/FatihSultanMehmed.png"}
           alt='adss'

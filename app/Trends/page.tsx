@@ -3,7 +3,7 @@ import TopCollector from "./TopCollector"
 import Title from "./Title"
 const page = () => {
   return (
-    <div className=' h-[100%] overflow-y-auto ' >
+    <div className=' h-full w-full overflow-x-hidden' >
           <Title
           title="Trending Auctions"
           />

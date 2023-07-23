@@ -14,7 +14,7 @@ const TrendingAuctions = () => {
             balance:"3400.5"
         }, {
             image:"/Trending3.png",
-            name:"Kbes",
+            name:"Atesh",
             balance:"2250.25"
         },
         {
