@@ -42,7 +42,7 @@ const Topcreator = () => {
     <>
    <Header title={"Topcreator"}/>
 
-    <div className="h-[26vh] md:min-h-[38vh] w-full md:w-[90%] gap-12 md:gap-3 my-3 px-4 md:p-4 flex flex-row md:flex-col overflow-x-auto md:overflow-y-auto md:rounded-2xl  md:dark:bg-black dark:bg-[#121212] bg-[#F9F6FE] md:bg-white">
+    <div className="h-[26vh] md:min-h-[30vh] md:w-[90%] gap-12 md:gap-3  px-4 md:p-4 flex flex-row md:flex-col overflow-x-auto md:overflow-y-auto md:rounded-2xl  md:dark:bg-black dark:bg-[#121212] bg-[#F9F6FE] md:bg-white">
       {
         Topcreatorarr.map((item,index)=>(
           <div key={index} className='flex md:flex-row flex-col min-w-[18vw] md:w-full items-center gap-2 md:h-[40px]  '>
@@ -67,7 +67,7 @@ const Topcreator = () => {
    
    </div>
           
-          <div className='flex justify-center h-full w-full flex-col ' >
+          <div className='flex justify-center items-center md:items-start h-full w-full flex-col ' >
             <div className=' font-bold text-[14px] md:text-[12px]'>{item.name}</div>
             <div className='text-[12px] md:text-[10px] dark:text-[#D463F9]'>{item.nick}</div>
           </div>

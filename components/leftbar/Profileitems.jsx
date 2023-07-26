@@ -8,7 +8,7 @@ const arr = [
   { title: "History" },
   { title: "Settings" },
 ];
-const Topbar = ({setDisplay}) => {
+const Topbar = () => {
   const router = useRouter();
   return (
     <div className="flex flex-col  gap-4 items-start p-0 w-full h-auto" >
@@ -17,7 +17,6 @@ const Topbar = ({setDisplay}) => {
         
         onClick={()=>{
           router.push(`/${i.title}`)
-          setDisplay.set(false)
         }}
          className="flex flex-row  w-full justify-start gap-4 pl-8 cursor-pointer" >
           <Image src={"/vector.png"} alt="asd" width={20} height={20} />

@@ -54,6 +54,11 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@metalstate/core@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.npmjs.org/@metalstate/core/-/core-0.0.2.tgz"
+  integrity sha512-78mpm2KZlMMJv+LejXb6YcA94MBIkFztpSARAA20+MNEgJ+SbFc9ybYc+xofla7kLzC2XD+rn+0+xX+d1kaFEA==
+
 "@next/env@13.4.10":
   version "13.4.10"
   resolved "https://registry.npmjs.org/@next/env/-/env-13.4.10.tgz"

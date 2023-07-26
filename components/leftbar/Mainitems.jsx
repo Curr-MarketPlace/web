@@ -14,7 +14,7 @@ const arr2 = [
 ];
 
 
-const Bottombar = ({setDisplay}) => {
+const Bottombar = () => {
 
   const router = useRouter();
    const [url, setUrl] = useState("/")
@@ -31,7 +31,6 @@ const Bottombar = ({setDisplay}) => {
               setUrl(i.title)
              }
            router.push(`/${url}`)
-            setDisplay.set(true)
         }}
           className="flex flex-row w-full justify-start gap-4 pl-8 cursor-pointer"
         >

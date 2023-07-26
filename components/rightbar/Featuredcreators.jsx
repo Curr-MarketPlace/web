@@ -37,10 +37,10 @@ title={"Featured Creators"}
           width={140}
           height={180}
           />
-          <div className='w-full h-[13%] font-bold text-sm flex items-end'>
+          <div className='w-full h-auto  font-bold text-sm flex items-end'>
               Melih Bey #1299
           </div>
-          <div className='w-full h-[13%] text-xs dark:text-[#D463F9] text-[#616161] '>
+          <div className='w-full h-auto text-xs dark:text-[#D463F9] text-[#616161] '>
             Ottoman NFT
           </div>
           <span className='font-medium text-sm flex items-center'>
@@ -57,10 +57,10 @@ title={"Featured Creators"}
           width={140}
           height={180}
           />
-          <div className='w-full h-[13%] font-bold text-sm flex items-end'>
+          <div className='w-full h-auto font-bold text-sm flex items-end'>
               Melih Bey #1299
           </div>
-          <div className='w-full h-[13%] text-xs dark:text-[#D463F9] text-[#616161] '>
+          <div className='w-full h-auto text-xs dark:text-[#D463F9] text-[#616161] '>
             Ottoman NFT
           </div>
           <span className='font-medium text-sm flex items-center'>
