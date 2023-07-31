@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/leftbar/index.jsx", "app/components/rightbar/Topcreator.jsx", "components/Home/page.tsx", "app/components/searchbar/Searchbar.tsx", "app/Market/ButtonGroup.jsx", "app/components/rightbar/SettingsModal.jsx", "app/components/leftbar/Mainitems.jsx", "app/Settings/Preferences/Colortheme.jsx", "components/mainSlider/index.jsx", "components/searchbar/ConnectWallet.jsx", "app/Market/page.js", "components/searchbar/Searchbar.tsx", "components/profilePopup/ProfilePopup.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/leftbar/index.jsx", "app/components/rightbar/Topcreator.jsx", "components/Home/page.tsx", "app/components/searchbar/Searchbar.tsx", "app/Market/ButtonGroup.tsx", "app/components/rightbar/SettingsModal.jsx", "app/components/leftbar/Mainitems.jsx", "app/Settings/Preferences/Colortheme.jsx", "components/mainSlider/index.jsx", "components/searchbar/ConnectWallet.jsx", "app/Market/page.js", "components/searchbar/Searchbar.tsx", "components/profilePopup/ProfilePopup.jsx", "components/home/Hotbids.tsx", "components/rightbar/Topcreator.jsx", "components/rightbar/Topcreator.jsx"],
   "exclude": ["node_modules"]
 }

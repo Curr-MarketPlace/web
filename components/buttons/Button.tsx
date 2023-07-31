@@ -2,11 +2,11 @@ import React from 'react'
 import { IconType } from 'react-icons'
 type ButtonProps = {
   // onSubmit: (e:React.MouseEvent<HTMLButtonElement>)=> void
-  btnLabel: string
-  rounded: string
-  size: string
+  btnLabel?: string
+  rounded?: string
+  size?: string
   icon?: IconType
-  mainButton: boolean
+  mainButton?: boolean
   // outLine?: boolean;
   // icon?: IconType
 }

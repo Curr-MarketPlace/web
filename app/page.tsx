@@ -1,5 +1,5 @@
 import Topcreator from '@/components/rightbar/Topcreator'
-import Hotbids from '../components/Home/Hotbids'
+import Hotbids from '../components/home/Hotbids'
 import MainSlider from '../components/home/MainSlider'
 import TrendingAuctions from '../components/home/TrendingAuctions'
 import Featuredcreators from '@/components/rightbar/Featuredcreators'
