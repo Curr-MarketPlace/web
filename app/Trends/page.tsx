@@ -10,6 +10,9 @@ const page = () => {
   return (
     <div className='flex flex-row h-full w-full md:px-0 px-5'>
       <div className=' h-full w-full  overflow-x-hidden'>
+        <span className='text-2xl font-semibold flex md:hidden text-black dark:text-white'>
+          Trends
+        </span>
         <Title title='Trending Auctions' />
 
         <TopCollector />

@@ -68,8 +68,8 @@ const Topcreator = () => {
    </div>
           
           <div className='flex justify-center items-center md:items-start h-full w-full flex-col ' >
-            <div className=' font-bold text-[14px] md:text-[12px]'>{item.name}</div>
-            <div className='text-[12px] md:text-[10px] dark:text-[#D463F9]'>{item.nick}</div>
+            <div className=' font-bold   text-base md:text-sm'>{item.name}</div>
+            <div className=' text-sm md:text-xs dark:text-[#D463F9]'>{item.nick}</div>
           </div>
           
 

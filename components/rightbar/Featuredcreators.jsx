@@ -21,8 +21,8 @@ title={"Featured Creators"}
           height={40}
           />
           <div className='flex justify-center h-full w-full flex-col ' >
-            <div className='font-bold text-[12px]'>Melih Kaan</div>
-            <div className='text-[10px] dark:text-[#D463F9]'>@melihkaanarc</div>
+            <div className='font-bold text-base md:text-sm'>Melih Kaan</div>
+            <div className='text-sm md:text-xs dark:text-[#D463F9]'>@melihkaanarc</div>
           </div>
 
           <BiDotsHorizontalRounded size={24} className='cursor-pointer' />
@@ -37,13 +37,13 @@ title={"Featured Creators"}
           width={140}
           height={180}
           />
-          <div className='w-full h-auto  font-bold text-sm flex items-end'>
+          <div className='w-full h-auto  font-bold text-base md:text-sm flex items-end'>
               Melih Bey #1299
           </div>
-          <div className='w-full h-auto text-xs dark:text-[#D463F9] text-[#616161] '>
+          <div className='w-full h-auto  text-sm md:text-xs dark:text-[#D463F9] text-[#616161] '>
             Ottoman NFT
           </div>
-          <span className='font-medium text-sm flex items-center'>
+          <span className='font-medium  text-sm md:text-xs flex items-center'>
                 <FaEthereum/>
              9.1 ETH
           </span>
@@ -57,13 +57,13 @@ title={"Featured Creators"}
           width={140}
           height={180}
           />
-          <div className='w-full h-auto font-bold text-sm flex items-end'>
+          <div className='w-full h-auto font-bold text-base md:text-sm flex items-end'>
               Melih Bey #1299
           </div>
-          <div className='w-full h-auto text-xs dark:text-[#D463F9] text-[#616161] '>
+          <div className='w-full h-auto text-sm  dark:text-[#D463F9] text-[#616161] '>
             Ottoman NFT
           </div>
-          <span className='font-medium text-sm flex items-center'>
+          <span className='font-medium  text-sm  flex items-center'>
                 <FaEthereum/>
              9.1 ETH
           </span>

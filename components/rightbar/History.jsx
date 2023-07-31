@@ -36,10 +36,10 @@ title={"History"}
           height={40}
           />
           <div className='flex justify-center h-full w-[70%] flex-col' >
-            <div className='font-bold text-[12px]'>{item.name}</div>
-            <div className='text-[10px] dark:text-[#D463F9]'>{item.nick}</div>
+            <div className='font-bold text-[14px] md:text-[12px]'>{item.name}</div>
+            <div className='text-[12px] md:text-[10px] dark:text-[#D463F9]'>{item.nick}</div>
           </div>
-         <div className='flex justify-end text-xs dark:text-[#D463F9] text-[#616161] w-[30%]'>
+         <div className='flex justify-end text-sm md:text-xs dark:text-[#D463F9] text-[#616161] w-[30%]'>
           <span>
           0.5250 ETH
 
