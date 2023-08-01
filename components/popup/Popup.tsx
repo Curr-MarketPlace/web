@@ -1,23 +1,25 @@
-"use client"
+'use client'
 import React from 'react'
-import Rightbar from '@/components/rightbar/Rightbar'
+import { useSelector } from 'react-redux'
+import { drawerOff } from '../../app/redux/drawer/drawerSlice'
+import { useDispatch } from 'react-redux'
+const Popup = () => {
+  const drawer = useSelector((state: any) => state.drawer.drawer)
+  const dispatch = useDispatch()
 
-const page = () => {
+  if (drawer == false) {
+    return null
+  }
   return (
-    <>
-       <button
-          id='dropdownDefaultButton'
-          data-dropdown-toggle='dropdown'
-          className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-          type='button'
-        >
-          Dropdown button{' '}
-        
-           
-        </button>
+    <div className='relative md:hidden' onClick={() => dispatch(drawerOff())}>
+      <div className='absolute z-10 opacity-0 h-[100vh] w-[100vw] bg-red-700'></div>
+
+      {/* İç içe geçmiş divlerin içerisine overlay eklenecek */}
+      <div className='relative'>
         <div
-          id='dropdown'
-          className='z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700'
+          className='absolute  z-30 mx-6 
+    bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700
+    '
         >
           <ul
             className='py-2 text-sm text-gray-700 dark:text-gray-200'
@@ -33,7 +35,7 @@ const page = () => {
             </li>
             <li>
               <a
-                href='#'
+                href='/Settings'
                 className='block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'
               >
                 Settings
@@ -57,8 +59,21 @@ const page = () => {
             </li>
           </ul>
         </div>
-    </>
+      </div>
+    </div>
   )
 }
 
-export default page
+export default Popup
+
+{
+  /* <div className='relative'>
+  <div className='absolute z-10 opacity-0 h-[100vh] w-[100vw] bg-red-700' onClick={()=>dispatch(drawerOff())}></div>
+
+  <div className='relative'>
+    <div onClick={()=>dispatch(drawerOff())} className='absolute bg-black h-14 w-full z-30'>
+      bassss
+    </div>
+  </div>
+</div> */
+}
