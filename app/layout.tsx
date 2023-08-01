@@ -8,7 +8,11 @@ import Searchbar from '@/components/searchbar/Searchbar'
 import { ThemeProvider } from 'next-themes'
 import type { AppProps } from 'next/app'
 import BottomBar from '@/components/bottomBar/BottomBar'
-import { useStorken } from '../data/storken'
+import { Provider } from 'react-redux'
+import { store } from './redux/store'
+import { drawerOff } from './redux/drawer/drawerSlice'
+import { useDispatch } from 'react-redux'
+import Popup from '@/components/popup/Popup'
 
 // ******* Wallet Kitt****
 
@@ -60,10 +64,13 @@ export default function RootLayout ({
   children: React.ReactNode
   etc: any
 }) {
+  // const dispatch = useDispatch()
+
   return (
-    <html lang='en'>
-      <body className={` ${inter.className}`}>
-        {/* <WagmiConfig config={wagmiConfig}>
+    <Provider store={store}>
+      <html lang='en'>
+        <body className={` ${inter.className}`}>
+          {/* <WagmiConfig config={wagmiConfig}>
           <RainbowKitProvider
             chains={chains}
             coolMode  
@@ -76,29 +83,31 @@ export default function RootLayout ({
             })}
             {...etc}
           >
-          
           </RainbowKitProvider> 
         </WagmiConfig> */}
+          <ThemeProvider attribute='class'>
+            <main>
+              <div
+                className='flex fixed dark:bg-[#121212] bg-[#F9F6FE]  h-[100vh] w-[100vw]'
+                // onClick={() => dispatch(drawerOff())}
+              >
+                <LeftBar />
+                <div className='flex h-full w-[100vw] md:w-[82vw] flex-col'>
+                  <Searchbar />
+                  <Popup />
 
-        <ThemeProvider attribute='class'>
-          <main>
-            <div className='flex fixed dark:bg-[#121212] bg-[#F9F6FE]  h-[100vh] w-[100vw]'>
-              <LeftBar />
-              <div className='flex h-full w-[100vw] md:w-[82vw] flex-col'>
-                <Searchbar />
-                <div className='flex flex-col justify-center md:flex-row md:pb-6 h-[100vh]  md:h-[88vh] w-full '>
-                  <div className='main-children md:pl-6  flex flex-col justify-center h-[80vh] md:h-full  md:min-h-[77vh]  w-full'>
-                    {children}
+                  <div className='flex flex-col justify-center md:flex-row md:pb-6 h-[100vh]  md:h-[88vh] w-full '>
+                    <div className='main-children md:pl-6  flex flex-col justify-center h-[80vh] md:h-full  md:min-h-[77vh]  w-full'>
+                      {children}
+                    </div>
+                    <BottomBar />
                   </div>
-                  <BottomBar />
-
-                  {/* <Rightbar /> */}
                 </div>
               </div>
-            </div>
-          </main>
-        </ThemeProvider>
-      </body>
-    </html>
+            </main>
+          </ThemeProvider>
+        </body>
+      </html>
+    </Provider>
   )
 }

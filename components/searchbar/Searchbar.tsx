@@ -3,9 +3,13 @@ import Image from 'next/image'
 import React, { useEffect } from 'react'
 // import ConnectWallet from "./ConnectWallet"
 import { BiSearch } from 'react-icons/bi'
+import { drawerOn, drawerOff } from '../../app/redux/drawer/drawerSlice'
+import { useDispatch } from 'react-redux'
+import Popup from '../popup/Popup'
 
 const searchbar = () => {
-  //
+  const dispatch = useDispatch()
+
   return (
     <div className='flex  md:p-0 justify-between items-center md:flex-row flex-row-reverse my-6 mx-2'>
       <div className='search-button hidden md:flex relative justify-start items-center w-full min-h-[12%] '>
@@ -29,6 +33,7 @@ const searchbar = () => {
         {/* <ConnectWallet/> */}
 
         <button
+          onClick={() => dispatch(drawerOn())}
           className='relative inline-flex items-center justify-center w-14 h-14 overflow-hidden
                    bg-gray-100 rounded-full  border-2 border-purple-500 hover:border-4 hover:border-purple-500'
         >

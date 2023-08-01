@@ -6,9 +6,7 @@ import Mainitems from './Mainitems'
 import Button from '../buttons/Button'
 import { FaReact } from 'react-icons/fa'
 import { useRouter } from 'next/navigation'
-import { useStorken } from '@/data/storken'
 import Link from 'next/link'
-// import Baritemstop from "@/components/Baritemstop"
 
 const LeftBar = () => {
   const textStyle = {
@@ -19,9 +17,6 @@ const LeftBar = () => {
     textFillColor: 'transparent'
   }
 
-  const [display, setDisplay] = useStorken<Boolean>('displayRightBar')
-
-  const router = useRouter()
   return (
     <div className='bg-white  dark:bg-black h-screen w-[18%] hidden md:flex flex-col items-start '>
       <Link
