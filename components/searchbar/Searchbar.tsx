@@ -33,7 +33,6 @@ const searchbar = () => {
         {/* <ConnectWallet/> */}
 
         <button
-          onMouseOut={() => dispatch(drawerOff())}
           onClick={() => dispatch(drawerOn())}
           className='relative inline-flex items-center justify-center w-14 h-14 overflow-hidden
                    bg-gray-100 rounded-full  border-2 border-purple-500 hover:border-4 hover:border-purple-500'
