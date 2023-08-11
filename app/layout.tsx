@@ -1,6 +1,6 @@
 'use client'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Poppins } from 'next/font/google'
 
 import LeftBar from '@/components/leftbar/Leftbar'
 import Rightbar from '@/components/rightbar/Rightbar'
@@ -12,7 +12,7 @@ import { Provider } from 'react-redux'
 import { store } from './redux/store'
 import { drawerOff } from './redux/drawer/drawerSlice'
 import { useDispatch } from 'react-redux'
-import Popup from '@/components/popup/Popup'
+import Drawer from '@/components/drawer/Drawer'
 
 // ******* Wallet Kitt****
 
@@ -51,6 +51,11 @@ const inter = Inter({
   weight: ['400', '500'],
   style: ['normal', 'normal']
 })
+const poppins = Poppins({
+  weight: ['400', '500'],
+  style: ['normal', 'normal'],
+  subsets: ['latin']
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -69,7 +74,7 @@ export default function RootLayout ({
   return (
     <Provider store={store}>
       <html lang='en'>
-        <body className={` ${inter.className}`}>
+        <body className={` ${poppins.className}`}>
           {/* <WagmiConfig config={wagmiConfig}>
           <RainbowKitProvider
             chains={chains}
@@ -94,7 +99,7 @@ export default function RootLayout ({
                 <LeftBar />
                 <div className='flex h-full w-[100vw] md:w-[82vw] flex-col'>
                   <Searchbar />
-                  <Popup />
+                  <Drawer />
 
                   <div className='flex flex-col justify-center md:flex-row md:pb-6 h-[100vh]  md:h-[88vh] w-full '>
                     <div className='main-children md:pl-6  flex flex-col justify-center h-[80vh] md:h-full  md:min-h-[77vh]  w-full'>

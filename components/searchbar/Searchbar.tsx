@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 import { BiSearch } from 'react-icons/bi'
 import { drawerOn, drawerOff } from '../../app/redux/drawer/drawerSlice'
 import { useDispatch } from 'react-redux'
-import Popup from '../popup/Popup'
+import Popup from '../drawer/Drawer'
 
 const searchbar = () => {
   const dispatch = useDispatch()
