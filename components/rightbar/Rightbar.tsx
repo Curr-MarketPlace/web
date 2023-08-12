@@ -13,7 +13,7 @@ const index = () => {
   const handleOnClose = () => setshowMyModal(false)
 
   return (
-    <div className=' min-h-[88%]  overflow-y-auto min-w-[30vw] hidden md:flex flex-col items-center  '>
+    <div className=' min-h-[88%] overflow-y-auto min-w-[30vw] hidden md:flex flex-col items-center  '>
       <div className=' w-full h-full flex flex-col items-center '>
         <SettingsModal onClose={handleOnClose} visible={showMyModal} />
         <Topcreator />

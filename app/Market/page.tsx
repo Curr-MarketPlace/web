@@ -128,7 +128,7 @@ const page = () => {
 
   return (
     <div className='flex flex-row h-full w-full'>
-      <div className='flex flex-col gap-3 h-full w-[100vw] md:w-full items-start p-2 overflow-y-auto  '>
+      <div className='flex flex-col gap-3 h-full w-[100vw] md:w-full items-start  overflow-y-auto  '>
         <ButtonGroup />
 
         <div className='flex md:hidden flex-col  h-full w-full gap-6 overflow-y-auto '>

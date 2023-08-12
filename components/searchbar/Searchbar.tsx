@@ -11,7 +11,7 @@ const searchbar = () => {
   const dispatch = useDispatch()
 
   return (
-    <div className='flex  md:p-0 justify-between items-center md:flex-row flex-row-reverse my-6 mx-2'>
+    <div className='flex md:p-0 justify-between items-center md:flex-row flex-row-reverse mt-6 mx-2'>
       <div className='search-button hidden md:flex relative justify-start items-center w-full min-h-[12%] '>
         <div className='h-6 w-6  ml-4 flex justify-center items-center absolute'>
           <Image src={'/vector.png'} alt='adsa' width={25} height={20} />
