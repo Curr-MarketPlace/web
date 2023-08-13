@@ -25,7 +25,7 @@ const LeftBar = () => {
         
         font-extrabold lg:text-lg w-full flex items-center justify-center cursor-pointer'
       >
-        <Image src={'/vector.png'} alt='asd' width={35} height={35} />
+        <Image src={'/Logo.png'} alt='logo' width={35} height={35} />
 
         <p className=' text-transparent  bg-clip-text bg-gradient-to-l from-purple-600  to-indigo-700  dark:from-pinkGrad-100  dark:bg-gradient-to-l dark:to-pinkGrad-100  '>
           Curr Marketplace

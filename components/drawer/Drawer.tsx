@@ -14,15 +14,15 @@ const Drawer = () => {
     <div className='relative md:hidden'>
       <div
         className={` z-10 top-0 opacity-50 fixed h-full w-[100vw] bg-slate-600 ${
-          drawer ? 'translate-x-0' : ' -translate-x-full '
+          drawer ? 'flex' : ' hidden '
         } `}
         onClick={() => dispatch(drawerOff())}
       ></div>
 
       {/* İç içe geçmiş divlerin içerisine overlay eklenecek */}
       <div
-        className={`top-0 flex flex-col items-center w-auto gap-3 bg-white pt-5 text-white fixed h-full z-40  ease-in-out duration-300   ${
-          drawer ? 'translate-x-0' : '-translate-x-full '
+        className={`top-0 flex flex-col items-center w-auto gap-3 bg-white pt-5 text-white fixed h-full z-40  ease-in-out duration-300 min-w-[68vw]  ${
+          drawer ? 'translate-x-' : '-translate-x-full '
         } `}
       >
         <div className='w-full flex gap-5 flex-col  p-5'>

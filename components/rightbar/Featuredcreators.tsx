@@ -9,7 +9,7 @@ const Featuredcreators = () => {
     <>
       <Header title={'Featured Creators'} />
 
-      <div className='h-auto p-4 w-full md:w-[90%] flex flex-col rounded-2xl dark:bg-black bg-white relative'>
+      <div className='h-auto p-5  w-full md:w-[90%] flex flex-col rounded-2xl dark:bg-black bg-white relative'>
         <div className='flex  mb-3  gap-2 px-4 w-full items-center  h-[20%] '>
           <Image
             src={'/Ellipse2.png'}

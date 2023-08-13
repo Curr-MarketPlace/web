@@ -127,24 +127,24 @@ const page = () => {
   }, [])
 
   return (
-    <div className='flex flex-row h-full w-full'>
+    <div className='flex flex-row h-full w-full p-5 md:p-0 '>
       <div className='flex flex-col gap-3 h-full w-[100vw] md:w-full items-start  overflow-y-auto  '>
         <ButtonGroup />
 
         <div className='flex md:hidden flex-col  h-full w-full gap-6 overflow-y-auto '>
           <MarketItem arrItem={firstArr} />
-          <div className='flex md:hidden flex-col pt-5'>
+          <div className='flex md:hidden flex-col md:pt-5'>
             <Topcreator />
           </div>
           <MarketItem arrItem={secondArr} />
 
-          <div className='flex md:hidden flex-col pt-5'>
+          <div className='flex md:hidden flex-col md:pt-5'>
             <Featuredcreators />
           </div>
 
           <MarketItem arrItem={thirdArr} />
 
-          <div className='flex md:hidden flex-col pt-5'>
+          <div className='flex md:hidden flex-col md:pt-5'>
             <History />
           </div>
 

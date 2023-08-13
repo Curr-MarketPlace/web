@@ -7,11 +7,12 @@ import History from '@/components/rightbar/History'
 import Rightbar from '@/components/rightbar/Rightbar'
 const page = () => {
   return (
-    <div className='flex flex-row h-full w-full overflow-y-auto md:px-0 px-5 '>
-      <div className='md:max-w-[50vw] w-full h-full  overflow-y-auto md:py-4 '>
-        <MainSlider />
-
-        <div className='flex items-center justify-between w-full h-[64px] '>
+    <div className='flex flex-row h-full w-full overflow-y-auto  '>
+      <div className='md:max-w-[50vw] w-full h-full  overflow-y-auto py-4 '>
+        <div className='px-5 md:px-0'>
+          <MainSlider />
+        </div>
+        <div className='flex items-center justify-between w-full h-[64px] px-5 md:px-0 '>
           <span className='font-semibold text-base '>Hot bids</span>
           <div className='flex flex-row gap-4'>
             <button className='miniButtons dark:bg-[#121212] dark:text-white '>
@@ -28,7 +29,7 @@ const page = () => {
 
         <Hotbids />
 
-        <div className='flex items-center justify-between w-full h-[64px]'>
+        <div className='flex items-center justify-between w-full h-[64px] px-5 md:px-0 '>
           <span className='font-semibold text-base '>Trending Auctions</span>
         </div>
 

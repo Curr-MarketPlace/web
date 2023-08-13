@@ -37,7 +37,7 @@ const Topcreator = () => {
     <>
       <Header title={'Topcreator'} />
 
-      <div className='h-[26vh] md:h-auto md:w-[90%] gap-12 md:gap-3  px-4 md:p-4 flex flex-row md:flex-col overflow-x-auto md:overflow-x-clip md:rounded-2xl  md:dark:bg-black dark:bg-[#121212] bg-[#F9F6FE] md:bg-white'>
+      <div className='h-[26vh] md:h-auto md:w-[90%] gap-12 md:gap-3  px-4 pl-5 md:pl-5 md:p-4 flex flex-row md:flex-col overflow-x-auto md:overflow-x-clip md:rounded-2xl  md:dark:bg-black dark:bg-[#121212] bg-[#F9F6FE] md:bg-white'>
         {Topcreatorarr.map((item, index) => (
           <div
             key={index}
