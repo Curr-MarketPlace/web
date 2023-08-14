@@ -3,7 +3,7 @@ import { BiCart, BiHomeAlt, BiTrendingUp, BiCollection } from 'react-icons/bi'
 const BottomBar = () => {
   return (
     <div
-      className='flex w-full h-full md:hidden 
+      className='flex w-full h-auto  md:hidden 
      bg-purple-600 bg-gradient-to-l  from-purple-600  to-indigo-700'
     >
       <div className='flex items-center justify-between w-full py-2 px-10 '>

@@ -101,11 +101,13 @@ export default function RootLayout ({
                   <Searchbar />
                   <Drawer />
 
-                  <div className='flex flex-col justify-center md:flex-row md:pb-6 h-[100vh]  md:h-[88vh] w-full '>
+                  <div className='flex flex-col justify-center  md:flex-row  md:pb-6 h-[100vh]  md:h-[88vh] w-auto '>
                     <div className='main-children md:pl-6  flex flex-col justify-center h-[80vh] md:h-full  md:min-h-[77vh]  w-full'>
                       {children}
                     </div>
-                    <BottomBar />
+                    <div className='h-auto bottom-0 absolute w-full'>
+                      <BottomBar />
+                    </div>
                   </div>
                 </div>
               </div>

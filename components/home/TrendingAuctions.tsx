@@ -27,7 +27,7 @@ const TrendingAuctions = () => {
     }
   ]
   return (
-    <div className='grid grid-cols-2 gap-3  md:flex flex-row w-full  h-auto '>
+    <div className='grid grid-cols-2 gap-3  md:flex flex-row w-full px-5 h-auto '>
       {arr.map((item, index) => (
         <div key={index} className='flex flex-col w-full items-start h-full '>
           <Link href={'/CollectionDetail'}>

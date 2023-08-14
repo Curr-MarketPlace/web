@@ -28,7 +28,7 @@ const Button: React.FC<ButtonProps> = ({
       bg-gradient-to-l  from-purple-600  to-indigo-700
        ${rounded} ${
         mainButton ? `py-2 px-6 text-base` : `py-1 px-4 text-sm`
-      } my-6 `}
+      } md:my-6 `}
     >
       {Icon && <Icon size={15} />}
 
