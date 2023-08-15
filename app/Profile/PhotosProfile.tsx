@@ -1,15 +1,15 @@
 import Image from 'next/image'
 import React from 'react'
 
-const Photos = () => {
+const PhotosProfile = () => {
   return (
     <div className='relative min-h-[32vh] md:min-h-[36vh] w-full flex '>
       <div className='h-60 w-full absolute rounded-md '>
-        <Image src={'/Cami.png'} alt='cami' fill />
+        <Image src={'/BackGroundPhoto.png'} alt='cami' fill />
       </div>
-      <div className='relative h-40 w-40 mx-5 self-end  rounded-full border-2 border-white '>
+      <div className='relative h-40 w-40 md:mx-5 self-end  rounded-full  '>
         <Image
-          src={'/FatihSultanMehmed.png'}
+          src={'/ProfilePhoto.png'}
           fill
           alt='sultan'
           className='rounded-full'
@@ -19,4 +19,4 @@ const Photos = () => {
   )
 }
 
-export default Photos
+export default PhotosProfile
