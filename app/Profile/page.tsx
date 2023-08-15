@@ -31,9 +31,11 @@ const page = () => {
   return (
     <div className='flex flex-row h-full  w-full overflow-y-auto'>
       <div className=' flex flex-col h-full w-full md:w-full items-start gap-5 overflow-y-auto md:py-5 '>
-        <Photos />
+        <div className=' px-5 pt-5 md:pt-0 w-full'>
+          <Photos />
+        </div>
         <ProfileBio />
-        <div className='flex flex-col w-full h-auto gap-1 md:gap-5 '>
+        <div className='flex flex-col w-full h-auto gap-1 md:gap-5 px-5'>
           <div className='flex flex-row w-full gap-5 px-5 md:px-0 '>
             <span className='text-[#901BB7] font-medium text-base md:text-sm'>
               Collected
@@ -69,7 +71,7 @@ const page = () => {
               <Grid5 size='24' color='#FF8A65' />
             </div>
           </div>
-          <div className='w-full h-auto md:flex md:flex-wrap grid grid-cols-2 flex-row gap-5 px-5 md:px-0 py-5'>
+          <div className='w-full h-auto md:flex md:flex-wrap grid grid-cols-2 flex-row gap-4 md:gap-10 pb-[50%] md:py-0 py-5 '>
             {arr.map((i, index) => (
               <Card img={i.image} key={index} />
             ))}

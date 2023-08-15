@@ -2,23 +2,15 @@
 import Image from 'next/image'
 import React, { useEffect } from 'react'
 // import ConnectWallet from "./ConnectWallet"
+import ProfileButton from './ProfileButton'
 import { BiSearch } from 'react-icons/bi'
-import { drawerOn, drawerOff } from '../../app/redux/drawer/drawerSlice'
-import { useDispatch } from 'react-redux'
-import { useSelector } from 'react-redux'
+
 type SearchbarProps = {
   drawerHidden: any
 }
 const searchbar: React.FC<SearchbarProps> = ({ drawerHidden }) => {
-  const dispatch = useDispatch()
-  const drawer = useSelector((state: any) => state.drawer.drawer)
-
-  useEffect(() => {
-    drawerHidden(drawer)
-  }, [drawer])
-
   return (
-    <div className='flex w-full md:p-0 justify-between items-center md:flex-row flex-row-reverse px-5  md:px-0 '>
+    <div className='flex w-full md:p-0 justify-between items-center md:flex-row flex-row-reverse     '>
       <div className='search-button hidden md:flex relative justify-start items-center w-full  '>
         <div className=' ml-4 flex justify-center items-center absolute '>
           <Image src={'/vector.png'} alt='adsa' width={25} height={20} />
@@ -35,23 +27,7 @@ const searchbar: React.FC<SearchbarProps> = ({ drawerHidden }) => {
       <div className=' flex md:hidden text-xl font-bold text-transparent  bg-clip-text bg-gradient-to-l from-purple-600  to-indigo-700  dark:from-pinkGrad-100  dark:bg-gradient-to-l dark:to-pinkGrad-100  '>
         Curr Marketplace
       </div>
-
-      <div className='connect-and-profile-button md:min-w-[30vw]   md:w-[42%] flex md:justify-end  items-center md:gap-5 md:px-6'>
-        {/* <ConnectWallet/> */}
-
-        <button
-          onClick={() => dispatch(drawerOn())}
-          className='relative inline-flex items-center justify-center w-14 h-14 overflow-hidden
-                 bg-gray-100 rounded-full  border-2 border-purple-500 hover:border-4 hover:border-purple-500'
-        >
-          <Image
-            src={'/unnamed.jpg'}
-            alt='asd'
-            className='rounded-full object-cover'
-            fill
-          />
-        </button>
-      </div>
+      <ProfileButton drawerHidden={drawerHidden} />
     </div>
   )
 }

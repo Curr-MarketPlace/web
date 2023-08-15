@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux'
 import Items from '../leftbar/Profileitems'
 import { FaEthereum } from 'react-icons/fa'
 import Image from 'next/image'
+import Link from 'next/link'
 const Drawer = () => {
   const drawer = useSelector((state: any) => state.drawer.drawer)
   const dispatch = useDispatch()
@@ -27,14 +28,18 @@ const Drawer = () => {
         } `}
       >
         <div className='w-full flex gap-5 flex-col  p-5'>
-          <div className='relative h-32 w-32 '>
+          <Link
+            href='Profile'
+            onClick={() => dispatch(drawerOff())}
+            className='relative h-32 w-32  '
+          >
             <Image
               fill
               src={'/FatihSultanMehmed.png'}
               className='rounded-full'
               alt='adss'
             />
-          </div>
+          </Link>
           <div className='flex flex-col gap-2'>
             <span className='text-black text-2xl font-semibold '>
               MelihBey#1299

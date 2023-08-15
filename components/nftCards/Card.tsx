@@ -31,10 +31,10 @@ const Card: React.FC<CardProps> = ({
   return (
     <div
       key={key}
-      className='flex flex-col gap-2 h-auto w-auto dark:bg-black bg-white rounded-2xl p-3'
+      className='flex flex-col gap-2 h-auto w-auto dark:bg-black bg-white rounded-2xl p-3 '
     >
-      <div className='flex justify-end mb-1 h-auto w-auto relative'>
-        <button className='flex items-center justify-center absolute rounded-full h-7 w-7 m-2 bg-white'>
+      <div className='flex justify-end mb-1 h-auto w-auto relative '>
+        <button className='flex items-center justify-center absolute rounded-full h-7 w-7 m-2 bg-white z-10'>
           <HiOutlineHeart color='#616161' size={20} />
         </button>
         <div className='h-52 w-48 relative'>

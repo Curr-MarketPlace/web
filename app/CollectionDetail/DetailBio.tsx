@@ -3,7 +3,7 @@ import { BiShareAlt, BiDotsHorizontalRounded } from 'react-icons/bi'
 
 const DetailBio = () => {
   return (
-    <div className='flex flex-col px-5 md:px-0 w-full h-auto gap-3 mt-2'>
+    <div className='flex flex-col px-5 w-full h-auto gap-3 mt-2'>
       <div className='flex flex-row justify-between'>
         <span className='font-semibold text-2xl'>Ottoman NFT Collection</span>
         <div className='flex flex-row gap-6'>

@@ -104,7 +104,7 @@ export default function RootLayout ({
                 <LeftBar />
                 <div className='flex   w-[100vw] h-[100vh] md:w-[82vw] flex-col'>
                   <div
-                    className={`h-auto py-4 flex w-full items-center  bg-white ease-in-out duration-300    ${
+                    className={`h-auto px-5 py-4 flex w-full items-center  bg-[#F9F6FE] ease-in-out duration-300    ${
                       drawer ? 'translate-x-3/4' : ' translate-x-'
                     }  `}
                   >
@@ -119,7 +119,7 @@ export default function RootLayout ({
                   `}
                   >
                     <div
-                      className={`main-children md:pl-6 flex flex-col justify-center h-full md:h-full  md:min-h-[77vh]  w-full
+                      className={`main-children md:pl-6 flex flex-col justify-center h-full md:h-full  md:min-h-[77vh]  w-full pb-2
                     `}
                     >
                       {children}

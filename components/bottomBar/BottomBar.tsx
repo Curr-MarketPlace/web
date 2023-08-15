@@ -6,7 +6,7 @@ const BottomBar = () => {
   const drawer = useSelector((state: any) => state.drawer.drawer)
   return (
     <div
-      className={`w-full h-auto  md:hidden bottom-0 absolute
+      className={`w-full h-auto  md:hidden bottom-0 absolute z-20
       bg-purple-600 bg-gradient-to-l  from-purple-600  to-indigo-700
       ${drawer ? `!bottom-20 ` : `bottom-0`}
       `}
