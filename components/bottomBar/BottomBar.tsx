@@ -1,12 +1,17 @@
 import Link from 'next/link'
 import { BiCart, BiHomeAlt, BiTrendingUp, BiCollection } from 'react-icons/bi'
+import { useSelector } from 'react-redux'
+
 const BottomBar = () => {
+  const drawer = useSelector((state: any) => state.drawer.drawer)
   return (
     <div
-      className='flex w-full h-auto  md:hidden 
-     bg-purple-600 bg-gradient-to-l  from-purple-600  to-indigo-700'
+      className={`w-full h-auto  md:hidden bottom-0 absolute
+      bg-purple-600 bg-gradient-to-l  from-purple-600  to-indigo-700
+      ${drawer ? `!bottom-20 ` : `bottom-0`}
+      `}
     >
-      <div className='flex items-center justify-between w-full py-2 px-10 '>
+      <div className='flex items-center justify-between w-full py-3 px-10 '>
         <Link
           href={'/'}
           className='flex flex-col items-center justify-center gap-1 h-auto text-[12px] w-auto text-white '

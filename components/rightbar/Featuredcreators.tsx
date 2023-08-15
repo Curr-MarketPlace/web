@@ -29,7 +29,7 @@ const Featuredcreators = () => {
         </div>
         <div className='flex flex-row h-full w-auto gap-6 justify-center '>
           <div className='item-1 gap-1 w-[42%] h-auto flex flex-col '>
-            <div className='relative h-44 w-36'>
+            <div className='relative h-52 w-full'>
               <Image
                 src={'/FatihSultanMehmed.png'}
                 alt='adss'
@@ -50,7 +50,7 @@ const Featuredcreators = () => {
             </span>
           </div>
           <div className='item-1 gap-1 w-[42%] h-auto flex flex-col '>
-            <div className='relative h-44 w-36'>
+            <div className='relative h-52 w-full'>
               <Image
                 src={'/FatihSultanMehmed.png'}
                 alt='adss'

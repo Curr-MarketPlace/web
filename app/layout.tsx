@@ -1,17 +1,13 @@
 'use client'
 import './globals.css'
 import { Inter, Poppins } from 'next/font/google'
-
+import { useState } from 'react'
 import LeftBar from '@/components/leftbar/Leftbar'
-import Rightbar from '@/components/rightbar/Rightbar'
 import Searchbar from '@/components/searchbar/Searchbar'
 import { ThemeProvider } from 'next-themes'
-import type { AppProps } from 'next/app'
 import BottomBar from '@/components/bottomBar/BottomBar'
 import { Provider } from 'react-redux'
 import { store } from './redux/store'
-import { drawerOff } from './redux/drawer/drawerSlice'
-import { useDispatch } from 'react-redux'
 import Drawer from '@/components/drawer/Drawer'
 
 // ******* Wallet Kitt****
@@ -69,8 +65,10 @@ export default function RootLayout ({
   children: React.ReactNode
   etc: any
 }) {
-  // const dispatch = useDispatch()
-
+  const [drawer, setDrawer] = useState(false)
+  const handleDrawer = (veri: any) => {
+    setDrawer(veri)
+  }
   return (
     <Provider store={store}>
       <html lang='en'>
@@ -93,21 +91,40 @@ export default function RootLayout ({
           <ThemeProvider attribute='class'>
             <main>
               <div
-                className='flex fixed dark:bg-[#121212] bg-[#F9F6FE]  h-[100vh] w-[100vw]'
-                // onClick={() => dispatch(drawerOff())}
+                className={`flex fixed dark:bg-[#121212] bg-[#F9F6FE]  h-[100vh] w-[100vw] 
+               
+              `}
               >
+                {/* <button
+                  className='h-60 w-60 bg-red-600'
+                  onClick={() => console.log(drawer)}
+                >
+                  asdasdsaasdasd
+                </button> */}
                 <LeftBar />
-                <div className='flex h-full w-[100vw] md:w-[82vw] flex-col'>
-                  <Searchbar />
+                <div className='flex   w-[100vw] h-[100vh] md:w-[82vw] flex-col'>
+                  <div
+                    className={`h-auto py-4 flex w-full items-center  bg-white ease-in-out duration-300    ${
+                      drawer ? 'translate-x-3/4' : ' translate-x-'
+                    }  `}
+                  >
+                    <Searchbar drawerHidden={handleDrawer} />
+                  </div>
                   <Drawer />
 
-                  <div className='flex flex-col justify-center  md:flex-row  md:pb-6 h-[100vh]  md:h-[88vh] w-auto '>
-                    <div className='main-children md:pl-6  flex flex-col justify-center h-[80vh] md:h-full  md:min-h-[77vh]  w-full'>
+                  <div
+                    className={`flex flex-col justify-center  md:flex-row  h-full  md:h-[88vh] w-auto ease-in-out duration-300 
+                    ${drawer ? 'translate-x-3/4' : ' '} 
+
+                  `}
+                  >
+                    <div
+                      className={`main-children md:pl-6 flex flex-col justify-center h-full md:h-full  md:min-h-[77vh]  w-full
+                    `}
+                    >
                       {children}
                     </div>
-                    <div className='h-auto bottom-0 absolute w-full'>
-                      <BottomBar />
-                    </div>
+                    <BottomBar />
                   </div>
                 </div>
               </div>

@@ -21,8 +21,9 @@ const Drawer = () => {
 
       {/* İç içe geçmiş divlerin içerisine overlay eklenecek */}
       <div
-        className={`top-0 flex flex-col items-center w-auto gap-3 bg-white pt-5 text-white fixed h-full z-40  ease-in-out duration-300 min-w-[68vw]  ${
-          drawer ? 'translate-x-' : '-translate-x-full '
+        className={`top-0 flex flex-col items-center  gap-3 bg-white pt-5 text-white fixed h-full z-40  w-3/4
+        ease-in-out duration-300 min-w-[68vw]  ${
+          drawer ? 'translate-x-0' : '-translate-x-full '
         } `}
       >
         <div className='w-full flex gap-5 flex-col  p-5'>

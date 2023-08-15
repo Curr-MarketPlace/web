@@ -5,14 +5,22 @@ import React, { useEffect } from 'react'
 import { BiSearch } from 'react-icons/bi'
 import { drawerOn, drawerOff } from '../../app/redux/drawer/drawerSlice'
 import { useDispatch } from 'react-redux'
-
-const searchbar = () => {
+import { useSelector } from 'react-redux'
+type SearchbarProps = {
+  drawerHidden: any
+}
+const searchbar: React.FC<SearchbarProps> = ({ drawerHidden }) => {
   const dispatch = useDispatch()
+  const drawer = useSelector((state: any) => state.drawer.drawer)
+
+  useEffect(() => {
+    drawerHidden(drawer)
+  }, [drawer])
 
   return (
-    <div className='flex md:p-0 justify-between items-center md:flex-row flex-row-reverse mt-6 mx-5'>
-      <div className='search-button hidden md:flex relative justify-start items-center w-full min-h-[12%] '>
-        <div className='h-6 w-6  ml-4 flex justify-center items-center absolute'>
+    <div className='flex w-full md:p-0 justify-between items-center md:flex-row flex-row-reverse px-5  md:px-0 '>
+      <div className='search-button hidden md:flex relative justify-start items-center w-full  '>
+        <div className=' ml-4 flex justify-center items-center absolute '>
           <Image src={'/vector.png'} alt='adsa' width={25} height={20} />
         </div>
         <input
@@ -28,13 +36,13 @@ const searchbar = () => {
         Curr Marketplace
       </div>
 
-      <div className='connect-and-profile-button md:min-w-[30vw]   md:w-[42%] min-h-[12%] flex md:justify-end items-center md:gap-5'>
+      <div className='connect-and-profile-button md:min-w-[30vw]   md:w-[42%] flex md:justify-end  items-center md:gap-5 md:px-6'>
         {/* <ConnectWallet/> */}
 
         <button
           onClick={() => dispatch(drawerOn())}
           className='relative inline-flex items-center justify-center w-14 h-14 overflow-hidden
-                   bg-gray-100 rounded-full  border-2 border-purple-500 hover:border-4 hover:border-purple-500'
+                 bg-gray-100 rounded-full  border-2 border-purple-500 hover:border-4 hover:border-purple-500'
         >
           <Image
             src={'/unnamed.jpg'}
