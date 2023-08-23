@@ -9,7 +9,6 @@ import BottomBar from '@/components/bottomBar/BottomBar'
 import { Provider } from 'react-redux'
 import { store } from './redux/store'
 import Drawer from '@/components/drawer/Drawer'
-
 // ******* Wallet Kitt****
 
 // import "@rainbow-me/rainbowkit/styles.css";
@@ -95,16 +94,10 @@ export default function RootLayout ({
                
               `}
               >
-                {/* <button
-                  className='h-60 w-60 bg-red-600'
-                  onClick={() => console.log(drawer)}
-                >
-                  asdasdsaasdasd
-                </button> */}
                 <LeftBar />
                 <div className='flex   w-[100vw] h-[100vh] md:w-[82vw] flex-col'>
                   <div
-                    className={`h-auto px-5 py-4 flex w-full items-center  bg-[#F9F6FE] ease-in-out duration-300    ${
+                    className={`h-auto px-5 py-4 flex w-full items-center  ease-in-out duration-300 bg-[#F9F6FE]  dark:bg-[#121212]  ${
                       drawer ? 'translate-x-3/4' : ' translate-x-'
                     }  `}
                   >

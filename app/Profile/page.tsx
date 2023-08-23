@@ -31,7 +31,7 @@ const page = () => {
   return (
     <div className='flex flex-row h-full  w-full overflow-y-auto'>
       <div className=' flex flex-col h-full w-full md:w-full items-start gap-5 overflow-y-auto md:py-5 '>
-        <div className=' px-5 pt-5 md:pt-0 w-full'>
+      <div className=' px-5 pt-5 md:pt-0 w-full'>
           <Photos />
         </div>
         <ProfileBio />
