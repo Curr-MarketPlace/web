@@ -4,8 +4,9 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import Image from 'next/image'
 import Link from 'next/link'
-import ConnectWallet from './ConnectWallet'
+// import ConnectWallet from './ConnectWallet'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
+import ConnectWallet from './ConnectWallet'
 type ProfileButtonProps = {
   drawerHidden: any
 }
@@ -21,7 +22,8 @@ const ProfileButton: React.FC<ProfileButtonProps> = ({ drawerHidden }) => {
   return (
     <div className='connect-and-profile-button md:min-w-[30vw]   md:w-[42%] flex md:justify-end  items-center md:gap-5 '>
       <div className='hidden md:flex'>
-        <ConnectButton />
+        {/* <ConnectButton /> */}
+        <ConnectWallet />
       </div>
       {/* Mobile button */}
       <div className='flex md:hidden'>

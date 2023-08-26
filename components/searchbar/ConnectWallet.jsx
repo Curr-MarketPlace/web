@@ -1,8 +1,10 @@
 import React from 'react'
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { IoIosArrowDown } from 'react-icons/io';
+import { useSelector, useDispatch } from 'react-redux';
 
 const ConnectWallet = () => {
+  
   return (
     <ConnectButton.Custom>
 {({
@@ -47,14 +49,19 @@ const ConnectWallet = () => {
         }
 
         if (chain.unsupported) {
+  
+
           return (
             <button onClick={openChainModal} type="button">
               Wrong network
             </button>    
           );
         }
-
+      if(connected){
+    console.log("addres:",account.address);
+      }
         return (
+        
           <div style={{ display: 'flex', gap: 12 }} className='dark:bg-[#D463F9] first-letter:bg-white border-2 p-2  border-[#901BB7] rounded-lg'>
             <button
               onClick={openChainModal}
@@ -92,7 +99,7 @@ const ConnectWallet = () => {
             type="button">
               {account.displayName}
               {account.displayBalance
-                ? ` (${account.displayBalance})`
+                ? ` (${account.displayBalance })`
                 : ''}
                 <IoIosArrowDown/>
             </button>

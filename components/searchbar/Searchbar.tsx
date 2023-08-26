@@ -9,6 +9,13 @@ type SearchbarProps = {
   drawerHidden: any
 }
 const searchbar: React.FC<SearchbarProps> = ({ drawerHidden }) => {
+  useEffect(() => {
+    fetch('api/user')
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(err => console.error(err))
+  }, [])
+
   return (
     <div className='flex w-full md:p-0 justify-between items-center md:flex-row flex-row-reverse     '>
       <div className='search-button hidden md:flex relative justify-start items-center w-full  '>
