@@ -7,6 +7,8 @@ import Items from '../leftbar/Profileitems'
 import { FaEthereum } from 'react-icons/fa'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ConnectButton } from '@rainbow-me/rainbowkit'
+
 const Drawer = () => {
   const drawer = useSelector((state: any) => state.drawer.drawer)
   const dispatch = useDispatch()
@@ -22,7 +24,7 @@ const Drawer = () => {
 
       {/* İç içe geçmiş divlerin içerisine overlay eklenecek */}
       <div
-        className={`top-0 flex flex-col items-center  gap-3 bg-white pt-5 text-white fixed h-full z-40  w-3/4
+        className={`top-0 flex flex-col items-center   gap-3 bg-white pt-5 text-white fixed h-full z-40  w-3/4
         ease-in-out duration-300 min-w-[68vw]  ${
           drawer ? 'translate-x-0' : '-translate-x-full '
         } `}
@@ -49,8 +51,14 @@ const Drawer = () => {
             </span>
           </div>
         </div>
+        <div className='flex h-1/3  w-full'>
+          {' '}
+          <Items />
+        </div>
 
-        <Items />
+        <div className='flex justify-self-end'>
+          <ConnectButton />
+        </div>
       </div>
     </div>
   )

@@ -11,34 +11,33 @@ import { store } from './redux/store'
 import Drawer from '@/components/drawer/Drawer'
 // ******* Wallet Kitt****
 
-// import "@rainbow-me/rainbowkit/styles.css";
-// import {
-//   getDefaultWallets,
-//   RainbowKitProvider,
-//   lightTheme,
-// } from "@rainbow-me/rainbowkit";
-// import { configureChains, createConfig, WagmiConfig } from "wagmi";
-// import { mainnet, polygon, optimism, arbitrum, zora } from "wagmi/chains";
-// import { alchemyProvider } from "wagmi/providers/alchemy";
-// import { publicProvider } from "wagmi/providers/public";
-//
+import '@rainbow-me/rainbowkit/styles.css'
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+  lightTheme
+} from '@rainbow-me/rainbowkit'
+import { configureChains, createConfig, WagmiConfig } from 'wagmi'
+import { mainnet, polygon, optimism, arbitrum, zora } from 'wagmi/chains'
+import { alchemyProvider } from 'wagmi/providers/alchemy'
+import { publicProvider } from 'wagmi/providers/public'
 
-// const { chains, publicClient } = configureChains(
-//   [mainnet, polygon, optimism, arbitrum, zora],
-//   [alchemyProvider({ apiKey: "process.env.ALCHEMY_ID" }), publicProvider()]
-// );
+const { chains, publicClient } = configureChains(
+  [mainnet, polygon, optimism, arbitrum, zora],
+  [alchemyProvider({ apiKey: 'process.env.ALCHEMY_ID' }), publicProvider()]
+)
 
-// const { connectors } = getDefaultWallets({
-//   appName: "My RainbowKit App",
-//   projectId: "YOUR_PROJECT_ID",
-//   chains,
-// });
+const { connectors } = getDefaultWallets({
+  appName: 'My RainbowKit App',
+  projectId: 'YOUR_PROJECT_ID',
+  chains
+})
 
-// const wagmiConfig = createConfig({
-//   autoConnect: true,
-//   connectors,
-//   publicClient,
-// });
+const wagmiConfig = createConfig({
+  autoConnect: true,
+  connectors,
+  publicClient
+})
 
 // ***** Wallet Kit *****
 const inter = Inter({
@@ -72,56 +71,56 @@ export default function RootLayout ({
     <Provider store={store}>
       <html lang='en'>
         <body className={` ${poppins.className}`}>
-          {/* <WagmiConfig config={wagmiConfig}>
-          <RainbowKitProvider
-            chains={chains}
-            coolMode  
-            theme={lightTheme({
-              accentColor: "#7b3fe4",
-              accentColorForeground: "white",
-              borderRadius: "medium",
-              fontStack: "system",
-              overlayBlur: "small",
-            })}
-            {...etc}
-          >
-          </RainbowKitProvider> 
-        </WagmiConfig> */}
           <ThemeProvider attribute='class'>
-            <main>
-              <div
-                className={`flex fixed dark:bg-[#121212] bg-[#F9F6FE]  h-[100vh] w-[100vw] 
+            <WagmiConfig config={wagmiConfig}>
+              <RainbowKitProvider
+                chains={chains}
+                coolMode
+                theme={lightTheme({
+                  accentColor: '#7b3fe4',
+                  accentColorForeground: 'white',
+                  borderRadius: 'medium',
+                  fontStack: 'system',
+                  overlayBlur: 'small'
+                })}
+                {...etc}
+              >
+                <main>
+                  <div
+                    className={`flex fixed dark:bg-[#121212] bg-[#F9F6FE]  h-[100vh] w-[100vw] 
                
               `}
-              >
-                <LeftBar />
-                <div className='flex   w-[100vw] h-[100vh] md:w-[82vw] flex-col'>
-                  <div
-                    className={`h-auto px-5 py-4 flex w-full items-center  ease-in-out duration-300 bg-[#F9F6FE]  dark:bg-[#121212]  ${
-                      drawer ? 'translate-x-3/4' : ' translate-x-'
-                    }  `}
                   >
-                    <Searchbar drawerHidden={handleDrawer} />
-                  </div>
-                  <Drawer />
+                    <LeftBar />
+                    <div className='flex   w-[100vw] h-[100vh] md:w-[82vw] flex-col'>
+                      <div
+                        className={`h-auto px-5 py-4 flex w-full items-center  ease-in-out duration-300 bg-[#F9F6FE]  dark:bg-[#121212]  ${
+                          drawer ? 'translate-x-3/4' : ' translate-x-'
+                        }  `}
+                      >
+                        <Searchbar drawerHidden={handleDrawer} />
+                      </div>
+                      <Drawer />
 
-                  <div
-                    className={`flex flex-col justify-center  md:flex-row  h-full  md:h-[88vh] w-auto ease-in-out duration-300 
+                      <div
+                        className={`flex flex-col justify-center  md:flex-row  h-full  md:h-[88vh] w-auto ease-in-out duration-300 
                     ${drawer ? 'translate-x-3/4' : ' '} 
 
                   `}
-                  >
-                    <div
-                      className={`main-children md:pl-6 flex flex-col justify-center h-full md:h-full  md:min-h-[77vh]  w-full pb-2
+                      >
+                        <div
+                          className={`main-children pb-[40%] md:pb-0 md:pl-6 flex flex-col justify-center h-full md:h-full  md:min-h-[77vh]  w-full
                     `}
-                    >
-                      {children}
+                        >
+                          {children}
+                        </div>
+                        <BottomBar />
+                      </div>
                     </div>
-                    <BottomBar />
                   </div>
-                </div>
-              </div>
-            </main>
+                </main>
+              </RainbowKitProvider>
+            </WagmiConfig>
           </ThemeProvider>
         </body>
       </html>
