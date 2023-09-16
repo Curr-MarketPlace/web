@@ -11,17 +11,21 @@ const Featuredcreators = () => {
 
       <div className='h-auto p-5  w-full md:w-[90%] flex flex-col rounded-2xl dark:bg-black bg-white relative'>
         <div className='flex  mb-3  gap-2 px-4 w-full items-center  h-[20%] '>
-          <Image
-            src={'/Ellipse2.png'}
-            alt='adss'
-            className='border border-[#D463F9] rounded-full'
-            width={40}
-            height={40}
-          />
+          <div className='relative rounded-full h-10 w-10 overflow-hidden'>
+            <Image
+              src={'/Ellipse2.png'}
+              alt='adss'
+              className='border border-[#D463F9] rounded-full'
+              fill
+              style={{
+                objectFit: 'cover'
+              }}
+            />
+          </div>
           <div className='flex justify-center h-full w-full flex-col '>
             <div className='font-bold text-base md:text-sm'>Melih Kaan</div>
             <div className='text-sm md:text-xs dark:text-[#D463F9]'>
-              @melihkaanarc
+              @melihkaanarac
             </div>
           </div>
 
@@ -29,13 +33,15 @@ const Featuredcreators = () => {
         </div>
         <div className='flex flex-row h-full w-auto gap-6 justify-center '>
           <div className='item-1 gap-1 w-[42%] h-auto flex flex-col '>
-            <div className='relative h-52 w-full'>
+            <div className='relative h-52 w-full overflow-hidden'>
               <Image
                 src={'/FatihSultanMehmed.png'}
                 alt='adss'
-                unoptimized
                 className='rounded-xl border dark:border-[#D463F9] '
                 fill
+                style={{
+                  objectFit: 'cover'
+                }}
               />
             </div>
             <div className='w-full h-auto font-bold text-base md:text-sm flex items-end'>
@@ -50,13 +56,15 @@ const Featuredcreators = () => {
             </span>
           </div>
           <div className='item-1 gap-1 w-[42%] h-auto flex flex-col '>
-            <div className='relative h-52 w-full'>
+            <div className='relative h-52 w-full overflow-hidden'>
               <Image
                 src={'/FatihSultanMehmed.png'}
                 alt='adss'
-                unoptimized
                 className='rounded-xl border dark:border-[#D463F9] '
                 fill
+                style={{
+                  objectFit: 'cover'
+                }}
               />
             </div>
             <div className='w-full h-auto font-bold text-base md:text-sm flex items-end'>

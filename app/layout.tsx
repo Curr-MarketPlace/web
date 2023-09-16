@@ -15,8 +15,14 @@ import '@rainbow-me/rainbowkit/styles.css'
 import {
   getDefaultWallets,
   RainbowKitProvider,
-  lightTheme
+  lightTheme,
+  connectorsForWallets
 } from '@rainbow-me/rainbowkit'
+import {
+  injectedWallet,
+  rainbowWallet,
+  walletConnectWallet
+} from '@rainbow-me/rainbowkit/wallets'
 import { configureChains, createConfig, WagmiConfig } from 'wagmi'
 import { mainnet, polygon, optimism, arbitrum, zora } from 'wagmi/chains'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
@@ -26,12 +32,13 @@ const { chains, publicClient } = configureChains(
   [mainnet, polygon, optimism, arbitrum, zora],
   [publicProvider()]
 )
-
-const { connectors } = getDefaultWallets({
-  appName: 'My RainbowKit App',
-  projectId: 'YOUR_PROJECT_ID',
-  chains
-})
+// const  projectId = "P"
+const connectors = connectorsForWallets([
+  {
+    groupName: 'Populer',
+    wallets: [injectedWallet({ chains })]
+  }
+])
 
 const wagmiConfig = createConfig({
   autoConnect: true,
