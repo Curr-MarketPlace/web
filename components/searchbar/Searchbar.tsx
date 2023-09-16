@@ -20,7 +20,8 @@ const searchbar: React.FC<SearchbarProps> = ({ drawerHidden }) => {
     <div className='flex w-full md:p-0 justify-between items-center md:flex-row flex-row-reverse     '>
       <div className='search-button hidden md:flex relative justify-start items-center w-full  '>
         <div className=' ml-4 flex justify-center items-center absolute '>
-          <Image src={'/vector.png'} alt='adsa' width={25} height={20} />
+          <BiSearch color='#3E06D6' size={30} />
+          {/* <Image src={'/vector.png'} alt='adsa' width={25} height={20} /> */}
         </div>
         <input
           className=' w-full p-3 pl-14 focus:outline-double focus:outline-[#901BB7] text-sm placeholder-purple-700 border-2 !border-[#901BB7] rounded-full bg-gray-50 '
