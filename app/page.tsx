@@ -1,3 +1,4 @@
+'use client'
 import Topcreator from '@/components/rightbar/Topcreator'
 import Hotbids from '../components/home/Hotbids'
 import MainSlider from '../components/home/MainSlider'
@@ -5,7 +6,24 @@ import TrendingAuctions from '../components/home/TrendingAuctions'
 import Featuredcreators from '@/components/rightbar/Featuredcreators'
 import History from '@/components/rightbar/History'
 import Rightbar from '@/components/rightbar/Rightbar'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 const page = () => {
+  const [user, setUser] = useState({})
+
+  const fecthData = async () => {
+    const response = await axios
+      .get<{ data: any }>('http://localhost:45501/user/all')
+      .then(res => {
+        console.log(res.data)
+        setUser(res.data)
+      })
+  }
+  useEffect(() => {
+    fecthData()
+    console.log('user:', user)
+  }, [])
+
   return (
     <div className='flex flex-row h-full w-full overflow-y-auto  '>
       <div className='md:max-w-[50vw] w-full h-full  overflow-y-auto py-4 '>

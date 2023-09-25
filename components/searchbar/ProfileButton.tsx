@@ -7,6 +7,8 @@ import Link from 'next/link'
 // import ConnectWallet from './ConnectWallet'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import ConnectWallet from './ConnectWallet'
+import { useAccount } from 'wagmi'
+
 type ProfileButtonProps = {
   drawerHidden: any
 }
