@@ -14,7 +14,7 @@ const ConnectWallet = () => {
 
     // Gönderilecek veri
     const postData = {
-      username: "b",
+      username: "mel",
       description: "b ",
       publicKey: address,
     };
@@ -55,7 +55,12 @@ const ConnectWallet = () => {
           account &&
           chain &&
           (!authenticationStatus || authenticationStatus === "authenticated");
-
+          useEffect(() => {
+            if (connected) {
+            testFunc()
+            }
+          }, [connected])
+          
         return (
           <div
             {...(!ready && {
@@ -82,12 +87,7 @@ const ConnectWallet = () => {
               }
                 
 
-              useEffect(() => {
-                if (connected) {
-                testFunc()
-                }
-              }, [connected])
-              
+            
               
              
 

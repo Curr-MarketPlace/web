@@ -1,46 +1,71 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
+import { useFormik } from 'formik'
+import { useAccount } from 'wagmi'
+const axios = require('axios')
 
 const InputGroup = () => {
+  const [data, setData] = useState('')
+
+  const { address } = useAccount()
+  console.log(address)
+
+  const formik = useFormik({
+    initialValues: {
+      username: '',
+      description: '',
+      publicKey: address,
+      email: ''
+    },
+    onSubmit: (values: any) => {
+      console.log('giden', values)
+
+      setData(values)
+      const options = {
+        url: 'http://localhost:45501/user/update',
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json;charset=UTF-8'
+        },
+        data: values
+      }
+
+      axios(options).then((response: any) => {
+        console.log(response.status)
+      })
+    }
+  })
   return (
-    <div className='flex justify-center items-center flex-col gap-3 w-full h-full '>
-      <div className='flex flex-col md:flex-row md:gap-16 gap-2  '>
-        <div className='flex flex-col'>
-          <p className='text-[#616161]'>Username</p>
-          <input
-            type='text'
-            placeholder='Username'
-            className='md:w-[17vw] w-full h-[40px] rounded-lg border  border-black px-4'
-          />
-        </div>
-        <div className='flex flex-col'>
-          <p className='text-[#616161]'>Email</p>
-
-          <input
-            type='text'
-            placeholder='Email'
-            className='md:w-[17vw] w-full  h-[40px] rounded-lg border border-black px-4'
-          />
-        </div>
-      </div>
-      <div className='flex flex-col'>
-        <p className='text-[#616161]'>Biography</p>
-
-        <input
-          type='text'
-          placeholder='Biography'
-          className='md:w-[38vw] w-full h-[100px] rounded-lg border border-black px-4 '
-        />
-      </div>
-      <div className='flex flex-col'>
-        <p className='text-[#616161]'>Wallet Address</p>
-
-        <input
-          type='text'
-          placeholder='Wallet Address'
-          className='md:w-[38vw] w-full h-[40px] rounded-lg border border-black px-4 '
-        />
-      </div>
-    </div>
+    <form onSubmit={formik.handleSubmit} className='flex flex-col gap-3'>
+      <label htmlFor='firstName'>username</label>
+      <input
+        id='username'
+        name='username'
+        type='text'
+        onChange={formik.handleChange}
+        value={formik.values.username}
+      />
+      <label htmlFor='lastName'>Desc</label>
+      <input
+        id='description'
+        name='description'
+        type='text'
+        onChange={formik.handleChange}
+        value={formik.values.description}
+      />
+      <label htmlFor='email'>Email Address</label>
+      <input
+        id='email'
+        name='email'
+        type='email'
+        onChange={formik.handleChange}
+        value={formik.values.email}
+      />
+      <button type='submit' className='bg-red-600 py-2 px-4'>
+        Submit
+      </button>
+    </form>
   )
 }
 
