@@ -2,38 +2,45 @@
 import React, { useState } from 'react'
 import { useFormik } from 'formik'
 import { useAccount } from 'wagmi'
+import { getUser, updateUser } from '@/data/action/userActions'
 const axios = require('axios')
-
+import { useRouter } from 'next/navigation'
 const InputGroup = () => {
-  const [data, setData] = useState('')
+  const [data, setData] = useState({
+    username: '',
+    address: '',
+    //avatar: '',
+    email: '',
+    description: ''
+  })
 
   const { address } = useAccount()
+
+  const router = useRouter()
   console.log(address)
+
+  const UpdateUser = async (address: any, data: any) => {
+    updateUser(address, data)
+      .then((response: any) => {
+        console.log(response)
+      })
+      .catch((err: any) => {
+        console.log(err)
+      })
+  }
 
   const formik = useFormik({
     initialValues: {
-      username: '',
-      description: '',
-      publicKey: address,
-      email: ''
+      username: data.username,
+      description: data.description,
+      address: address,
+      email: data.email
     },
     onSubmit: (values: any) => {
       console.log('giden', values)
+      UpdateUser(address, values)
 
-      setData(values)
-      const options = {
-        url: 'http://localhost:45501/user/update',
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json;charset=UTF-8'
-        },
-        data: values
-      }
-
-      axios(options).then((response: any) => {
-        console.log(response.status)
-      })
+      router.push('/Profile')
     }
   })
   return (
@@ -46,7 +53,7 @@ const InputGroup = () => {
         onChange={formik.handleChange}
         value={formik.values.username}
       />
-      <label htmlFor='lastName'>Desc</label>
+      <label htmlFor='lastName'>description</label>
       <input
         id='description'
         name='description'

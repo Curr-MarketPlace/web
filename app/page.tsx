@@ -8,21 +8,21 @@ import History from '@/components/rightbar/History'
 import Rightbar from '@/components/rightbar/Rightbar'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { getUsers } from '@/data/action/userActions'
 const page = () => {
   const [user, setUser] = useState({})
 
-  const fecthData = async () => {
-    const response = await axios
-      .get<{ data: any }>('http://localhost:45501/user/all')
-      .then(res => {
-        console.log(res.data)
-        setUser(res.data)
+  const getUser = async () => {
+    const users = await getUsers()
+      .then((res:any) => {
+        console.log('uses', res)
+      })
+      .catch(err => {
+        console.log(err)
       })
   }
-  useEffect(() => {
-    fecthData()
-    console.log('user:', user)
-  }, [])
+
+  getUser()
 
   return (
     <div className='flex flex-row h-full w-full overflow-y-auto  '>

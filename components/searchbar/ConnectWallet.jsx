@@ -4,35 +4,27 @@ import { IoIosArrowDown } from "react-icons/io";
 import { useSelector, useDispatch } from "react-redux";
 const axios = require("axios");
 import { useAccount } from "wagmi";
+import { createUser } from "@/data/action/userActions";
 
 const ConnectWallet = () => {
   const { address } = useAccount();
 
-  const testFunc = async () => {
-    // POST isteği gönderilecek endpoint URL'si
-    const endpointURL = "http://localhost:45501/user/create";
 
-    // Gönderilecek veri
-    const postData = {
-      username: "mel",
-      description: "b ",
-      publicKey: address,
-    };
 
-    // Axios ile POST isteği gönderme
-    axios
-      .post(endpointURL, postData, {
-        headers: {
-          "Content-Type": "application/json",
-        },
+  const [data, setData] = React.useState({
+    username: "",
+    address: address,
+    avatar: "",
+    desc: "",
+  });
+
+  const CreateUser = async () => {
+    await createUser(data)
+      .then((res) => {
+        console.log("res", res);
       })
-      .then((response) => {
-        // Başarılı bir şekilde cevap alındığında işlemleri burada yapabilirsiniz.
-        console.log("Cevap:", response.data);
-      })
-      .catch((error) => {
-        // Hata durumunda işlemleri burada yapabilirsiniz.
-        console.error("Hata:", error);
+      .catch((err) => {
+        console.log("err", err);
       });
   };
 
@@ -55,12 +47,12 @@ const ConnectWallet = () => {
           account &&
           chain &&
           (!authenticationStatus || authenticationStatus === "authenticated");
-          useEffect(() => {
-            if (connected) {
-            testFunc()
-            }
-          }, [connected])
-          
+        useEffect(() => {
+          if (connected) {
+            CreateUser();
+          }
+        }, [connected]);
+
         return (
           <div
             {...(!ready && {
@@ -85,11 +77,6 @@ const ConnectWallet = () => {
                   </button>
                 );
               }
-                
-
-            
-              
-             
 
               if (chain.unsupported) {
                 return (
